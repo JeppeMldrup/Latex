@@ -1,0 +1,154 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{vmargin}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Fysik Aflevering 9}
+\chead{13/03/2018}
+\lhead{Jeppe Møldrup}
+\rfoot{side \thepage}
+
+\title{Fysik Aflevering 9}
+\author{Jeppe Møldrup}
+\date{13/03/2018}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+
+\begin{itemize}
+  \item {Opgave 1}\\
+  Jeg ganger mængden af vand per sekund med det givne antal sekunder for at få mængden af vand per det givne antal sekunder eller bare mængden af vand der løber gennem røret på den givne tid\\
+  $$
+  0.5\, \frac{liter}{s} \cdot 7\, sekunder = 3.5\, liter
+  $$
+  Så på 7 sekunder løber der $3.5$ liter vand gennem røret\\
+
+  \item {Opgave 2}
+  \begin{enumerate}
+    \item[a.] Jeg gør det samme som i $Opgave\, 1$ da strømstyrken er antallet af coulomber per sekund og jeg prøver at finde antallet af coulomber indenfor et andet tidsinterval\\
+    $$
+    5\, min \cdot 60\, s = 300\, s
+    $$
+    $$
+    2\, \frac{C}{s} \cdot 300\, s = 600\, C
+    $$
+    Så på 5 minutter løber der $600$ coulomber gennem ledningen\\
+
+    \item[b.] Jeg starter med at finde mængden af elektroner per coulomb ved at tage en coulomb og divedere det med hvor mange coulomber der er for en elektron\\
+    $$
+    \frac{1\, Coulomb}{1.60217653 \cdot 10^{-19}\, Coulomb} = 6.2415095 \cdot 10^{18}\, elektroner
+    $$
+    Det er hvor mange elektroner der er for en coulomb. Så jeg ganger det bare med antallet af coulomber for min brødrister\\
+    $$
+    6.2415095 \cdot 10^{18}\, elektroner \cdot 600\, Coulomb = 3.7449057 \cdot 10^{21}\, elektroner
+    $$
+    så der løber cirka $3.74 \cdot 10^{21}$ elektroner gennem ledningen på 5 minutter\\
+  \end{enumerate}
+
+  \item{Opgave 3}\\
+  Da strømstyrken er coulomber per 1 sekund skal jeg bare dividere antallet af coulomber per 3 sekunder med de 3 sekunder
+  $$
+  \frac{0.6\, C}{3\, s} = 0.2\, \frac{C}{s}
+  $$
+  Så strømstyrken er $0.2$ ampere eller $0.2$ coulomber per sekund\\
+
+  \item{Opgave 4}
+  \begin{enumerate}
+    \item[a.] Jeg benytter formlen
+    $$
+    E = U \cdot I
+    $$
+    Jeg indsætter mine værdier
+    $$
+    E = 24\, V \cdot 5\, A = 120\, W
+    $$
+    Så den maksimale effekt strømforsyningen kan afgive er $120\, W$\\
+
+    \item[b.] Det kan den godt da $120\, W$ er mere end $30\, W$\\
+  \end{enumerate}
+
+  \item{Opgave 5}
+  \begin{enumerate}
+    \item[a.] Jeg isolerer strømstyrken i formlen
+    $$
+    E = U \cdot I
+    $$
+    Så formlen bliver
+    $$
+    I = \frac{E}{U}
+    $$
+    Så indsætter jeg mine formler
+    $$
+    I = \frac{900\, W}{12\, V} = 75\, A
+    $$
+    Så strømstyrken for selvstateren er $75\, A$\\
+
+    \item[b.] Jeg isolerer resistansen i formlen
+    $$
+    U = I \cdot R
+    $$
+    Så formlen bliver
+    $$
+    R = \frac{U}{I}
+    $$
+    Så indsætter jeg mine værdier
+    $$
+    R = \frac{12\, V}{75\, A} = 0.16\, \Omega
+    $$
+    Så resistansen i selvstarteren når den arbejder er $0.16\, \Omega$\\
+  \end{enumerate}
+
+  \item{Opgave 6}\\
+  Begge grafer skærer i origo. Så jeg ved at b i forskriften er 0.\\
+  Så forskriften er ampere gange med en konstant er lig med spændingen. Konstanten er så resistansen for materialet da
+  $$
+  U = I \cdot R
+  $$
+  Så jeg vælger to tilfældige værdier fra begge grafer og bruger formlen
+  $$
+  a = \frac{y_2 - y_1}{x_2 - x_1}
+  $$
+  hvor a er hældningskonstanten. Så jeg indsætter mine punkter
+  $$
+  a_{kobber} = \frac{15-7.5}{4-2} = \frac{7.5}{2} = 3.75\, \Omega
+  $$
+  $$
+  a_{jern} = \frac{20-10}{2-1} = \frac{10}{1} = 10\, \Omega
+  $$
+  Så resistansen for kobber er $3.75\, \Omega$ og for jern er den $10\, \Omega$\\
+
+  \item{Opgave 7}
+  \begin{enumerate}
+    \item[a.] Jeg isolerer strømstyrken fra formlen
+    $$
+    U = I \cdot R
+    $$
+    Så formlen bliver
+    $$
+    I = \frac{U}{R}
+    $$
+    Så indsætter jeg mine værdeir med den mindste resistans
+    $$
+    I = \frac{230\, V}{1\, k\Omega} = 0.23\, A = 230\, mA
+    $$\\
+
+    \item[b.] Ja det er dødeligt da $230\, mA$ er større end $20\, mA$\\
+    \item[c.] Jeg gør det samme som i $Opgave\, 7a$
+    $$
+    I = \frac{24\, V}{1\, k\Omega} = 0.024\, A = 23\, mA
+    $$
+    Det er stadig over grændsen på $20\, mA$ så det er stadig dødeligt
+  \end{enumerate}
+\end{itemize}
+
+\end{document}
