@@ -29,7 +29,14 @@
 \begin{document}
 
 \begin{abstract}
-Abstract
+This thesis is made to examine how air resistance affects a cupcake mold that is falling
+through the air. Equipped with knowledge about differential calculus, velocity, acceleration
+and the theory behind air resistance i have made an experiment in which i have recorded
+cupcake molds falling through the air with varying masses. I have then used the collected
+data to deduce an equation for calculating the air resistance that is affecting the cupcake
+mold. I have used this equation in a piece of code writtin in python which creates some
+ideal data for a falling cupcake mold, which i can then use to compare to the real world
+data that i have recorded.
 \end{abstract}
 \pagebreak
 
@@ -37,7 +44,13 @@ Abstract
 \pagebreak
 
 \section{Indledning}
-Indledning
+I denne opgave vil jeg undersøge luftmodstandens indvirkning på en kageform gennem forsøg
+hvor jeg vil indsamle data på en kageform der falder gennem luften. Udfra viden om
+Differenskvotient, Differentialkvotient, hastighed, acceleration og teorien bag
+luftmodstand, vil jeg med forsøget finde en ligning for luftmodstand og køre den
+gennem en simulation skrevet i python og derefter sammenligne det med data fra forsøget,
+for at se hvor præcist mit data er. Sammenligning giver så indblik i hvor troværdig mit data
+og min ligning for luftmodstand er.
 
 \section{Redegørelse}
 Differenskvotient er sekantens hældning af to punkter $x_{0}$ og $x_{0}+\Delta x$ på en differentiabel graf.
@@ -141,8 +154,8 @@ Nu når vi så har kørt Python koden og lavet de tre diagrammer i bilag 4, 5 og
 Når man kigger på grafen for sammenhængen mellem tid og sted så kan man se at den faktisk passer nogenlunde fornuftigt med dataen fra simulationen.
 Men hvis man derimod kigger på graferne for sammenhængen mellem ted og hastighed og for sammenhængen mellem tid og acceleration. Så ser man at de ikke
 passer lige så godt som de andre. Punkterne i de to grafer stikker kun i samme retning som dataen for simulationen men ellers er der ikke så meget til fælles for dem.
-Og det skyldes fejlkilder.\\
-fejlkilder der indgår i vores forsøg er f.eks. at vores bevægelsesføler ikke måler hastighed eller acceleration, men i stedet regner dem ud ud fra stedfunktionen.
+Og det skyldes fejlkilder.
+Fejlkilder der indgår i vores forsøg er f.eks. at vores bevægelsesføler ikke måler hastighed eller acceleration, men i stedet regner dem ud ud fra stedfunktionen.
 Så hvis stedfunktionen som føleren har målt ikke er helt god. Så bliver de resulterende hastigheds- og accelerationsfunktioner heller ikke helt gode og nok kommer til
 at have relativ stor afvigelse. Derudover har vi i vores forsøg kommet til at indstille vores føler til kun at tage data med 20 hz, i stedet for at indstille den til
 25 hz. Mindre datapunkter betyder normalt også at det bliver mindre præcist. Ellers er der fejlkilder som at frontarealet ikke konstant fordi vi hele tiden trækker og
@@ -156,8 +169,8 @@ brugt modellen sammen med newtons 2. lov til at opskrive en differentialligning.
 Differentialligningen var i dette tilfælde ikke mulig at løse på normal vis, så
 i stedet brugt jeg Eulers metode til at finde en numerisk løsning på
 differentialligningen. Derefter sammenlignede jeg noget af mit opsamlede data
-og så min numeriske løsning på differentialligningen, dette giver indblik i hvor
-præcist mit data var og hvor troværdig min formel for luftmodstand er.
+og så min numeriske løsning på differentialligningen. Jeg kan så konkludere at mit
+data og min ligning for luftmodstand ikke er super præcise pga. fejlkilder.
 
 \section{Bilag}
 \subsection*{Bilag 1}
