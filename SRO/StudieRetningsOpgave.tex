@@ -36,8 +36,9 @@ Abstract
 \section{Indledning}
 Indledning
 \section{Redegørelse}
-Differenskvotient er sekantens hældning af to punkter $x$ og $x+\Delta x$ på en differentiabel graf.
-Differentialkvotient er så tangentens hældning af et punkt $x$ på en differentiabel graf.\\
+Differenskvotient er sekantens hældning af to punkter $x_{0}$ og $x_{0}+\Delta x$ på en differentiabel graf.
+Differentialkvotient er så tangentens hældning af et punkt $x_{0}$ på en differentiabel graf.\\
+Se bilag 1.\\
 Hastighed er den udledte funktion fra en stedfunktion dvs. en graf for tid og strækning, hvor den udledte funktion er en graf for tid og strækning per tid. Så hastighed er ændringen af hastighed per tid og har enheden $\frac{m}{s}$.
 Acceleration er så den udledte funktion fra en hastighedsfunktion. Dvs. at acceleration er ændringen af hastighed per tid og har enheden $\frac{m}{s^2}$.\\
 Teorien bag luftmodstand er at jo større tværsnitsarealet eller frontarealet for et legeme er og jo hurtigere legemet bevæger sig gennem luften, desto større er den luftmodstand der virker på legemet. Luftmodstanden vil være en kraft der peger den anden retning end den retning som legemet bevæger sig,
@@ -85,11 +86,43 @@ kan vi bare indsætte værdierne in i tabellen nedenunder
 \end{center}
 
 Herefter indsætter vi værdierne for hastighed og luftmodstand ind i et CAS program og udfører potensregression for at finde en sammenhæng mellem
-hastigheden af kageformen og luftmodstanden. Grunden til at vi bruger potensregression og ikke nogle af de andre er fordi det er den regressionstype der passer bedst med vores data.
+hastigheden af kageformen og luftmodstanden. Grunden til at vi bruger potensregression og ikke nogle af de andre er fordi det er den regressionstype der passer bedst med vores data.\\
+Se bilag 2.
+\subsection{Differentialligning}
+Nu hvor vi har en formel for luftmodstand vil vi gerne kunne bruge den i en simulation så vi kan sammenligne noget af vores data med den.
+Nogle ting vi ved er
+$$F_{t}=m \cdot g$$
+Og den teoretiske formel for luftmodstand er
+$$F_{luft}=-k \cdot v^2$$
+Så
+$$F_{res}=F_{luft}+F_{t}=-k \cdot v^2 + m \cdot g$$
+(Dette gælder kun fordi vores akse peger nedad. Dvs. at tyngdekraften er positiv og luftmodstanden er negativ)\\
+Newtons anden lov siger at
+$$F_{res}=m \cdot a$$
+Så vi kan substituere $F_{res}$ i den anden formel
+$$-k \cdot v^2 + m \cdot g = m \cdot a$$
+Så isolerer vi acceleration i formlen
+$$a = \frac{-k \cdot v^2}{m} + g$$
+Og som jeg forklarede i redegørelsen så er acceleration bare den udledte funktion af hastighed, så vi kan substituere
+$a$ med $v'$
+$$v'=\frac{-k}{m}\cdot v^2 + g$$
+Og så ser vi at det er en differentialligning vi har gang i her.
 
-\subsection{Numerisk løsning}
-numerisk
+\subsection{Numerisk løsning af differentialligningen}
+Numerisk
+
 \subsection{Sammenligning mellem forsøg og numerisk løsning}
 Sammenligning
+
+\section{bilag}
+\subsection*{bilag 1}
+\begin{center}
+  \includegraphics[width=\linewidth]{tangentogsekant.png}
+\end{center}
+
+\subsection*{bilag 2}
+\begin{center}
+\includegraphics[width=\linewidth]{Ligningforluftmodstand.png}
+\end{center}
 
 \end{document}
