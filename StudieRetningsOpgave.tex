@@ -25,12 +25,12 @@
 
 \begin{document}
 
-\tableofcontents
-\pagebreak
-
 \begin{abstract}
 Abstract
 \end{abstract}
+\pagebreak
+
+\tableofcontents
 \pagebreak
 
 \section{Indledning}
@@ -61,10 +61,32 @@ den udledte funktion konstant. Så skriver vi så dataet ned i tabellen nedenund
         \hline
         $v(\frac{m}{s})$ & $0.981$ & $1.14$ & $1.67$ & $2.59$ & $1.65$ & $3.05$ & $1.89$ & $1.99$ \\
         \hline
-        $m(g)$ & $6.92$ & $14.05$ & $34.83$ & $62.02$ & $23.93$ & $69.55$ & $28.72$ & $40.43$ \\
+        $m(g)$ & $6.91$ & $14.07$ & $34.83$ & $62.04$ & $23.97$ & $69.51$ & $28.68$ & $40.47$ \\
         \hline
   \end{tabular}
 \end{center}
+
+Som jeg forklarede i redegørelsen for forsøget ved vi at når hastigheden er konstant. Og det kun er tyngdekraften og luftmodstanden der virker på kageformen
+så vil tyngdekraften og luftmodstanden være lige store. Så vi bruger formlen
+$$F_{t}=m \cdot a$$
+Til at finde størrelsen på tyngdekraften der virker på kageformen. \\
+Og da $F_{t}=F_{luft}$(Vi kigger kun på størrelsen af kraften her, da det er den der er ens)
+kan vi bare indsætte værdierne in i tabellen nedenunder
+\begin{center}
+  \begin{tabular}{| c | c | c | c | c | c | c | c | c |}
+        \hline
+        $v(\frac{m}{s})$ & $0.981$ & $1.14$ & $1.67$ & $2.59$ & $1.65$ & $3.05$ & $1.89$ & $1.99$ \\
+        \hline
+        $m(g)$ & $6.91$ & $14.07$ & $34.83$ & $62.04$ & $23.97$ & $69.51$ & $28.68$ & $40.47$ \\
+        \hline
+        $F_{luft}(N)$ & $0.068$ & $0.138$ & $0.342$ & $0.609$ & $0.235$ & $0.683$ & $0.282$ & $0.397$ \\
+        \hline
+  \end{tabular}
+\end{center}
+
+Herefter indsætter vi værdierne for hastighed og luftmodstand ind i et CAS program og udfører potensregression for at finde en sammenhæng mellem
+hastigheden af kageformen og luftmodstanden. Grunden til at vi bruger potensregression og ikke nogle af de andre er fordi det er den regressionstype der passer bedst med vores data.
+
 \subsection{Numerisk løsning}
 numerisk
 \subsection{Sammenligning mellem forsøg og numerisk løsning}
