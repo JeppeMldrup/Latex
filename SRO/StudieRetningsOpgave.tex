@@ -10,6 +10,7 @@
 \usepackage{pgfplots}
 \usepackage{listings}
 \usepackage{pythonhighlight}
+\usetikzlibrary{snakes}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -53,12 +54,13 @@ Formålet med forsøget er at finde en sammenhæng mellem faldhastighed af et le
 hvor vi så måler papirformene med en bevægelsesføler. For at få noget variation ændrer vi på massen af papirformene ved at stakke flere papirforme oveni hinanden og lade dem falde sammen.\\
 Teorien bag det er at kageformene bliver udsat for 2 kræfter. Tyngdekraften og luftmodstanden. Og når kageformene så når et punkt hvor de falder med konstant hastighed, ved vi fra newtons 1. lov
 at summen af alle kræfter er lig 0. Og da luftmodstanden i dette tilfælde laver en kraft der er omvendt af tyngdekraften ved vi at de to krafter må være lig med hinanden hvir kageformen falder med
-en konstant hastighed.
+en konstant hastighed.\\
+Se bilag 8.
 
 \subsection{Ligning for $F_{luft}$}
 For at finde en ligning for $F_{luft}$ starter vi med at måle en hel masse data
 med kageformene. Her finder vi så et område i vores data hvor vi kan se at kageformen
-falder med konstant hastighed. De kan vi se fordi stedfunktionen er lineær og derfor er
+falder med konstant hastighed se det gule område i bilag 7. De kan vi se fordi stedfunktionen er lineær og derfor er
 den udledte funktion konstant. Så skriver vi så dataet ned i tabellen nedenunder
 \begin{center}
   \begin{tabular}{| c | c | c | c | c | c | c | c | c |}
@@ -92,7 +94,8 @@ Herefter indsætter vi værdierne for hastighed og luftmodstand ind i et CAS pro
 hastigheden af kageformen og luftmodstanden. Grunden til at vi bruger potensregression og ikke nogle af de andre er fordi det er den regressionstype der passer bedst med vores data.\\
 Se bilag 2.
 \subsection{Differentialligning}
-Nu hvor vi har en formel for luftmodstand vil vi gerne kunne bruge den i en simulation så vi kan sammenligne noget af vores data med den.
+Nu hvor vi har en formel for luftmodstand vil vi gerne kunne bruge den i en simulation så vi kan sammenligne noget af vores data med den. Den data
+vi vil sammenligne med simulationsdataen er noget af det data hvor kageformen endnu ikke har ramt konstant hastighed endnu. Se bilag 7.\\
 Nogle ting vi ved er
 $$F_{t}=m \cdot g$$
 Og den teoretiske formel for luftmodstand er
@@ -145,13 +148,23 @@ at have relativ stor afvigelse. Derudover har vi i vores forsøg kommet til at i
 25 hz. Mindre datapunkter betyder normalt også at det bliver mindre præcist. Ellers er der fejlkilder som at frontarealet ikke konstant fordi vi hele tiden trækker og
 skubber i kageformen uden at tænke over det, men altså på den måde skabe en afvigelse i frontarealet.
 
+\section{Konklusion}
+I denne opgave har jeg undersøgt luftmodstandens indvirkning på en kageform gennem forsøg
+hvor jeg har indsamlet data på en kageform der falder gennem luften. Jeg har så
+brugt denne data til at opskrive en model for luftmodstandens indvirkning. Jeg har så
+brugt modellen sammen med newtons 2. lov til at opskrive en differentialligning.
+Differentialligningen var i dette tilfælde ikke mulig at løse på normal vis, så
+i stedet brugt jeg Eulers metode til at finde en numerisk løsning på
+differentialligningen. Derefter sammenlignede jeg noget af mit opsamlede data
+og så min numeriske løsning på differentialligningen, dette giver indblik i hvor
+præcist mit data var og hvor troværdig min formel for luftmodstand er.
 
 \section{Bilag}
 \subsection*{Bilag 1}
 \begin{center}
   \includegraphics[width=\linewidth]{tangentogsekant.png}
 \end{center}
-Fra: http://www.buhlweb.dk/matwiki/index.php?n=MatematikB.Differentialkvotient\\
+Fra:\\ http://www.buhlweb.dk/matwiki/index.php?n=MatematikB.Differentialkvotient\\
 Sidst besøgt: 21/06-2018 klokken 21:12
 
 \subsection*{Bilag 2}
@@ -261,6 +274,16 @@ with open("data.csv",'w') as myfile:
 \subsection*{Bilag 6}
 \begin{center}
 \includegraphics[width=\linewidth]{acceleration.png}
+\end{center}
+
+\subsection*{Bilag 7}
+\begin{center}
+\includegraphics[width=\linewidth]{maalthastighed.png}
+\end{center}
+
+\subsection*{Bilag 8}
+\begin{center}
+  \input{kageformdiagram.tex}
 \end{center}
 
 \end{document}
