@@ -187,91 +187,84 @@ Sidst besøgt: 21/06-2018 klokken 21:12
 
 \subsection*{Bilag 3}
 \begin{python}
-# EULERS METODE
-# Simulering af frit fald
-# Accelationen er a = g = 9.82 m/s^2
+  from pylab import*
+  from math import*
 
-from pylab import*
-from math import*
+  # --- STARTBETINGELSER ---
+  s0 = 0         # Kuglen starter 5.00 meter over jorden
+  t0 = 0         # Tiden er 0 s ved start
+  a0 = 4.21      # Startaccelerationen er 9.82 m/s^2 - nedad!
+  v0 = 0.54          # Starthastigheden er 0 m/s
+  q = 1.9517759055
+  k = 0.092171751618
+  m = 0.03483
+  g = 9.82
 
-# --- STARTBETINGELSER ---
-s0 = 0         # Kuglen starter 5.00 meter over jorden
-t0 = 0         # Tiden er 0 s ved start
-a0 = 4.21      # Startaccelerationen er 9.82 m/s^2 - nedad!
-v0 = 0.54          # Starthastigheden er 0 m/s
-q = 1.9517759055
-k = 0.092171751618
-m = 0.03483
-g = 9.82
+  dt = 0.001      # Laengden af tidsskridtet
 
-dt = 0.001      # Laengden af tidsskridtet
+  tidraw = [0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9]
+  tidboi = []
+  velocityraw =[-0.54,-0.76,-0.96,-1.12,-1.25,-1.37,-1.48,-1.58]
+  velocity = []
+  accelerationraw = [-4.21,-4.06,-3.57,-3.01,-2.55,-2.27,-2.10,-1.78]
+  acceleration = []
+  positionraw = [0.85, 0.81, 0.77, 0.72, 0.66, 0.59, 0.52, 0.44]
+  position = []
 
-tidraw = [0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9]
-tidboi = []
-velocityraw =[-0.54,-0.76,-0.96,-1.12,-1.25,-1.37,-1.48,-1.58]
-velocity = []
-accelerationraw = [-4.21,-4.06,-3.57,-3.01,-2.55,-2.27,-2.10,-1.78]
-acceleration = []
-positionraw = [0.85, 0.81, 0.77, 0.72, 0.66, 0.59, 0.52, 0.44]
-position = []
+  for x in range(0, positionraw.__len__()):  #behandling af det raa data saa position, accelleration og hastighed stiger og starter ved 0 mens tiden starter ved 0.
+      position.append(positionraw[0]-positionraw[x])
+      tidboi.append(tidraw[x]-tidraw[0])
+      velocity.append(-1*velocityraw[x])
+      acceleration.append(-1*accelerationraw[x])
 
-for x in range(0, positionraw.__len__()):  #behandling af det raa data saa position, accelleration og hastighed stiger og starter ved 0 mens tiden starter ved 0.
-    position.append(positionraw[0]-positionraw[x])
-    tidboi.append(tidraw[x]-tidraw[0])
-    velocity.append(-1*velocityraw[x])
-    acceleration.append(-1*accelerationraw[x])
+  tmax = tidboi[-1]   #saetter max tiden til den tid hvor vores data stopper.
 
-tmax = tidboi[-1]   #saetter max tiden til den tid hvor vores data stopper.
-# --- DATA ---
-sdat = [s0]       # Liste med data - sted
-tdat = [t0]       # Tid
-vdat = [v0]       # Hastighed
-adat = [a0]     # Acceleration
+  # --- DATA ---
+  sdat = [s0]       # Liste med data - sted
+  tdat = [t0]       # Tid
+  vdat = [v0]       # Hastighed
+  adat = [a0]     # Acceleration
 
-# --- Eulers metode ---
-while(t0<tmax):     # Proceduren gentages indtil makstiden opnaas
-    s1 = s0 + v0*dt # Her skriver vi ligningerne ind.
-    v1 = v0 + a0*dt
-    p = float(math.pow(v0, q))
-    a1 = float((-(k/m)*p)+g)       # Den er her konstant
-    t1 = t0 + dt
-    sdat.append(s1) # Beregningen af det nye punkt tilfoejes til listerne
-    vdat.append(v1)
-    adat.append(a1)
-    tdat.append(t1)
-    s0 = s1         # Det ny punkt laves til udgangspunkt for naeste beregning
-    v0 = v1
-    t0 = t1
-    a0 = a1
+  # --- Eulers metode ---
+  while(t0<tmax):     # Proceduren gentages indtil makstiden opnaas
+      s1 = s0 + v0*dt # Her skriver vi ligningerne ind.
+      v1 = v0 + a0*dt
+      p = float(math.pow(v0, q))
+      a1 = float((-(k/m)*p)+g)       # Den er her konstant
+      t1 = t0 + dt
+      sdat.append(s1) # Beregningen af det nye punkt tilfoejes til listerne
+      vdat.append(v1)
+      adat.append(a1)
+      tdat.append(t1)
+      s0 = s1         # Det ny punkt laves til udgangspunkt for naeste beregning
+      v0 = v1
+      t0 = t1
+      a0 = a1
 
-with open("data.csv",'w') as myfile:
-    myfile.write("Tid,Sted,Hastighed,Acceleration \n")
-    for i in range(0, tdat.__len__()):
-        myfile.write(str(tdat[i]) + "," + str(sdat[i]) + "," + str(vdat[i]) + "," + str(adat[i]) + "\n")
+  # --- GRAFIK ---
+  figure(1)
+  title("Sammenhaeng mellem tid og sted")
+  xlabel(" t ")
+  ylabel(" s ")
+  plot(tdat,sdat,'ro')    # Her tegnes simuleringen
+  plot(tidboi, position,'bo')    # Her tegnes simuleringen
 
-        # --- GRAFIK ---
-        figure(1)
-        title("Sammenhaeng mellem tid og sted")
-        xlabel(" t ")
-        ylabel(" s ")
-        plot(tdat,sdat,'ro')    # Her tegnes simuleringen
-        plot(tidboi, position,'bo')    # Her tegnes simuleringen
+  figure(2)
+  title("Sammenhaeng mellem tid og hastighed")
+  xlabel(" t ")
+  ylabel(" v ")
+  plot(tdat,vdat,'ro')    # Her tegnes simuleringen
+  plot(tidboi,velocity,'bo')    # Her tegnes simuleringen
 
-        figure(2)
-        title("Sammenhaeng mellem tid og hastighed")
-        xlabel(" t ")
-        ylabel(" v ")
-        plot(tdat,vdat,'ro')    # Her tegnes simuleringen
-        plot(tidboi,velocity,'bo')    # Her tegnes simuleringen
+  figure(3)
+  title("Sammenhaeng mellem tid og acceleration")
+  xlabel(" t ")
+  ylabel(" a ")
+  plot(tdat, adat,'ro')    # Her tegnes simuleringen
+  plot(tidboi, acceleration,'bo')    # Her tegnes simuleringen
 
-        figure(3)
-        title("Sammenhaeng mellem tid og acceleration")
-        xlabel(" t ")
-        ylabel(" a ")
-        plot(tdat, adat,'ro')    # Her tegnes simuleringen
-        plot(tidboi, acceleration,'bo')    # Her tegnes simuleringen
+  show()                  # Og her laver programmet grafen
 
-        show()                  # Og her laver programmet grafen
 \end{python}
 
 \subsection*{Bilag 4}
