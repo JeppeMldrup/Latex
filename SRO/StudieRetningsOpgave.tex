@@ -37,6 +37,7 @@ Abstract
 
 \section{Indledning}
 Indledning
+
 \section{Redegørelse}
 Differenskvotient er sekantens hældning af to punkter $x_{0}$ og $x_{0}+\Delta x$ på en differentiabel graf.
 Differentialkvotient er så tangentens hældning af et punkt $x_{0}$ på en differentiabel graf.\\
@@ -132,20 +133,33 @@ i stedet.\\
 Se bilag 3.
 
 \subsection{Sammenligning mellem forsøg og numerisk løsning}
-Sammenligning
+Nu når vi så har kørt Python koden og lavet de tre diagrammer i bilag 4, 5 og 6. Kan vi så sammenligne dem med hinanden.
+(Rød farve er simulationen og blå farve er vores målte data)\\
+Når man kigger på grafen for sammenhængen mellem tid og sted så kan man se at den faktisk passer nogenlunde fornuftigt med dataen fra simulationen.
+Men hvis man derimod kigger på graferne for sammenhængen mellem ted og hastighed og for sammenhængen mellem tid og acceleration. Så ser man at de ikke
+passer lige så godt som de andre. Punkterne i de to grafer stikker kun i samme retning som dataen for simulationen men ellers er der ikke så meget til fælles for dem.
+Og det skyldes fejlkilder.\\
+fejlkilder der indgår i vores forsøg er f.eks. at vores bevægelsesføler ikke måler hastighed eller acceleration, men i stedet regner dem ud ud fra stedfunktionen.
+Så hvis stedfunktionen som føleren har målt ikke er helt god. Så bliver de resulterende hastigheds- og accelerationsfunktioner heller ikke helt gode og nok kommer til
+at have relativ stor afvigelse. Derudover har vi i vores forsøg kommet til at indstille vores føler til kun at tage data med 20 hz, i stedet for at indstille den til
+25 hz. Mindre datapunkter betyder normalt også at det bliver mindre præcist. Ellers er der fejlkilder som at frontarealet ikke konstant fordi vi hele tiden trækker og
+skubber i kageformen uden at tænke over det, men altså på den måde skabe en afvigelse i frontarealet.
 
-\section{bilag}
-\subsection*{bilag 1}
+
+\section{Bilag}
+\subsection*{Bilag 1}
 \begin{center}
   \includegraphics[width=\linewidth]{tangentogsekant.png}
 \end{center}
+Fra: http://www.buhlweb.dk/matwiki/index.php?n=MatematikB.Differentialkvotient\\
+Sidst besøgt: 21/06-2018 klokken 21:12
 
-\subsection*{bilag 2}
+\subsection*{Bilag 2}
 \begin{center}
 \includegraphics[width=\linewidth]{Ligningforluftmodstand.png}
 \end{center}
 
-\subsection*{bilag 3}
+\subsection*{Bilag 3}
 \begin{python}
 # EULERS METODE
 # Simulering af frit fald
@@ -155,10 +169,10 @@ from pylab import*
 from math import*
 
 # --- STARTBETINGELSER ---
-s0 = 0       # Kuglen starter 5.00 meter over jorden
-t0 = 0          # Tiden er 0 s ved start
-a0 = 9.82      # Startaccelerationen er 9.82 m/s^2 - nedad!
-v0 = 0          # Starthastigheden er 0 m/s
+s0 = 0         # Kuglen starter 5.00 meter over jorden
+t0 = 0         # Tiden er 0 s ved start
+a0 = 4.21      # Startaccelerationen er 9.82 m/s^2 - nedad!
+v0 = 0.54          # Starthastigheden er 0 m/s
 q = 1.9517759055
 k = 0.092171751618
 m = 0.03483
@@ -166,20 +180,20 @@ g = 9.82
 
 dt = 0.001      # Laengden af tidsskridtet
 
-tidraw = [0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9]
+tidraw = [0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9]
 tidboi = []
-velocityraw =[-0.14,-0.32,-0.54,-0.76,-0.96,-1.12,-1.25,-1.37,-1.48,-1.58]
+velocityraw =[-0.54,-0.76,-0.96,-1.12,-1.25,-1.37,-1.48,-1.58]
 velocity = []
-accelerationraw = [-2.77,-3.77,-4.21,-4.06,-3.57,-3.01,-2.55,-2.27,-2.10,-1.78]
+accelerationraw = [-4.21,-4.06,-3.57,-3.01,-2.55,-2.27,-2.10,-1.78]
 acceleration = []
-positionraw = [0.88, 0.87, 0.85, 0.81, 0.77, 0.72, 0.66, 0.59, 0.52, 0.44]
+positionraw = [0.85, 0.81, 0.77, 0.72, 0.66, 0.59, 0.52, 0.44]
 position = []
 
 for x in range(0, positionraw.__len__()):  #behandling af det raa data saa position, accelleration og hastighed stiger og starter ved 0 mens tiden starter ved 0.
     position.append(positionraw[0]-positionraw[x])
     tidboi.append(tidraw[x]-tidraw[0])
-    velocity.append(velocityraw[0]-velocityraw[x])
-    acceleration.append(accelerationraw[0]-accelerationraw[x])
+    velocity.append(-1*velocityraw[x])
+    acceleration.append(-1*accelerationraw[x])
 
 tmax = tidboi[-1]   #saetter max tiden til den tid hvor vores data stopper.
 # --- DATA ---
@@ -233,5 +247,20 @@ with open("data.csv",'w') as myfile:
 
         show()                  # Og her laver programmet grafen
 \end{python}
+
+\subsection*{Bilag 4}
+\begin{center}
+\includegraphics[width=\linewidth]{sted.png}
+\end{center}
+
+\subsection*{Bilag 5}
+\begin{center}
+\includegraphics[width=\linewidth]{hastighed.png}
+\end{center}
+
+\subsection*{Bilag 6}
+\begin{center}
+\includegraphics[width=\linewidth]{acceleration.png}
+\end{center}
 
 \end{document}
