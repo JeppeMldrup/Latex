@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{vmargin}
+\usepackage{chemfig}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{06-05-2018}
+\chead{Fysik Aflevering 11}
+\lhead{Jeppe Møldrup}
+\rfoot{side \thepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\Large{\textbf{Fysik Aflevering 11}}
+\normalsize
+
+\section*{Opgave 1.}
+Strømstyrken gennem en NTC resistor med resistansen 25 $k \Omega$ er $1.9 \ mA$.
+\begin{enumerate}
+  \item[a.] Beregn den effekt, hvormed der omsættes elektrisk energi i NTC resistoren.\\
+  Jeg bruger formlen
+  $$P_{komp}=U \cdot I$$
+  Så jeg finder spændingsforskellen $U$ med formlen
+  $$U=I \cdot R$$
+  $$U_{NTC}=1.9 \ mA \cdot 25 \ k \Omega = 47.5 \ V$$
+  Så jeg indsætter mine værdier
+  $$P_{NTC}= 47.5 \ V \cdot 1.9 \ mA = 90.25 \ W$$
+  Så den effekt, hvormed der omsættes elektrisk energi i NTC resistoren er $90.25 \ W$
+
+  \item[b.] Bestem NTC resistorens temperatur.\\
+  Jeg starter med at udregne strømstyrken med værdierne fra batteriet og den anden resistor med formlen
+  $$I=\frac{U}{R}$$
+  $$I=\frac{12.0 \ V}{31 \ k \Omega} = 38.7 \ mA$$
+  Nu bruger jeg så strømstyrken og NTC resistorens spændingsfald til at udregne NTC resistorens resistans med formlen
+  $$R=\frac{U}{I}$$
+  $$R_{NTC}=\frac{3.5 \ V}{38.7 \ mA}=10.2 \ k \Omega$$
+  Og så aflæser jeg den tilhørende temperatur til $10.2 \ k \Omega$ på grafen, som cirka er $44^{\circ}C$
+\end{enumerate}
+
+\section*{Opgave 2.}
+\begin{enumerate}
+  \item[a.] Bestem, hvor lang tid der i alt kan suges på e-cigaretten, før batteriet skal genoplades.\\
+  Da $1 \ C = 1 \ J$ ved jeg at der er $5.04 \ kJ$ til rådighed.\\
+  Så jeg bruger formlen
+  $$t=\frac{E}{P}$$
+  med mine værdier
+  $$t_{e-cig}=\frac{5.04 \ kJ}{5.5 \ W}=916.36 \ s$$
+  Så du skal suge i omkring $916.36 \ s$ inden batteriet er helt tomt.
+
+  \item[b.] Jeg antager at væsken er ved $25^{\circ}C$
+  Jeg starter med formlen for opvarmning
+  $$Q_{opvarmning}=m \cdot c \cdot \Delta T$$
+  Så lægger jeg formlen for fordampning oveni
+  $$Q_{fordampning}=L_{s} \cdot m$$
+  $$Q_{begge}=m \cdot c \cdot \Delta T + L_{s} \cdot m$$
+  så isolerer jeg massen
+  $$Q_{begge}=m(c \cdot \Delta T + L_{s}) \leftrightarrow m=\frac{Q_{begge}}{c \cdot \Delta T + L_{s}}$$
+  Så indsætter jeg mine værdier og udregner massen, jeg indsætter effekten på $Q's$ plads da det er energien for ét sekund jeg udregner
+  $$m_{væske}=\frac{5.5 \ J}{2.51 \ \frac{J}{g \cdot K} \cdot (187^{\circ}C-25^{\circ}C) + 711 \ \frac{J}{g}}=0.0049 \ g$$
+  Så e-cigaretten kan fordampe omkring $0.0049 \ g$ af væsken hvert sekund.
+\end{enumerate}
+
+\section*{Opgave 3.}
+\begin{enumerate}
+  \item[a.] For at beregne hendes gennemsnitlige fart tager jeg bare strækningen divideret med tiden
+  $$\frac{200 \ m}{139.11 \ s}=1.44 \ \frac{m}{s}$$
+  Så hendes gennemsnitlige fart var cirka $1.44 \ \frac{m}{s}$
+
+  \item[b.] Da funktionen for den tilbagelagte strækning er stamfunktion til funktionen for hastigheden, kan jeg bare tælle tern under grafen for a differentiere et område.
+  Et tern er $0.2$ sekunder langt og $0.2 \ \frac{m}{s}$ højt. Dvs at et tern svarer til 1 m.\\
+  Jeg har talt området under grafen til cirka at være 77 tern. dvs at på ét svømmetag tilbagelægger hun cirka 77 meter.
+\end{enumerate}
+
+\section*{Opgave 4.}
+\begin{enumerate}
+  \item[a.] Jeg starter med at finde pælens rumfang
+  $$0.3 \ m \cdot 0.3 \ m \cdot 9.0 \ m=0.81 \ m^3$$
+  derefter tager jeg bare vægten og dividerer den med rumfanget for at få densiteten
+  $$\rho _{beton}=\frac{1.8 \ ton}{0.81 \ m^3}=2222. \overline{2} \ \frac{kg}{m^3}$$
+
+  \item[b.] Jeg ved at ved 0.11 m over pælen er hastigheden eller hældningen af grafen for
+  (t, s) 2.05 og at accellerationen er $-9.82 \ \frac{m}{s^2}$
+  dvs. at funktionen for hastigheden er $v(t)=-9.82t+2.05$\\
+  For at finde funktionen for strækningen integrerer jeg bare funktionen for hastigheden.
+  $$s(t)=\int -9.82t+2.05 \ dt=-4.41 \ \frac{m}{s^2} \cdot t^2+2.05 \ \frac{m}{s} \cdot t+0.11 \ m$$
+  Så finder skal jeg bare finde til hvilken tid $s(t)=0 \ m$
+  $$solve(0=-4.41 \ \frac{m}{s^2} \cdot t^2+2.05 \ \frac{m}{s} \cdot t+0.11 \ m, \ t) \rightarrow t=0.51 \ s$$
+  Så indsætter jeg den tid ind i funktionen for hastigheden for at finde den tilhørende hastighed til tiden
+  $$v(0.51)=-9.82 \cdot 0.51+2.05 = -2.99 \ \frac{m}{s}$$
+  Så bruger jeg formlen
+  $$E_{kin}=\frac{1}{2}\cdot m\cdot v^2$$
+  Jeg indsætter mine værdier
+  $$E_{kin}=\frac{1}{2}\cdot 4.1 \cdot 10^3 \ kg \cdot -2.99^2=18327 \ J$$
+  Så jernklodsen ville have omkring $18327 \ J$ kinetisk energi idét den rammer pælen.
+\end{enumerate}
+
+\end{document}

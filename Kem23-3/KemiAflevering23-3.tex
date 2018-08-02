@@ -1,0 +1,167 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{vmargin}
+\usepackage{chemfig}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Kemi Afleveringsopgaver}
+\chead{23-03-2018}
+\lhead{Jeppe Møldrup}
+\rfoot{side \thepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\LARGE{\textbf{Kemi Afleveringsopgaver}}
+\normalsize{}
+
+\section{Opg. 1}
+3-Chlorpropansyre har $pK_s$ på 4,0.
+\begin{itemize}
+  \item[a.] Tegn strukturformlen for 3-Chlorpropansyre
+  \begin{center}
+  \chemfig{Cl-[:30]-[:-30]-[:30](=[:90]O)-[:-30]OH}
+  \end{center}
+
+  \item[b.] Opskriv reaktionsskemaet for 3-Chlorpropansyres reaktion med vand
+  \begin{center}
+  \schemestart
+  \small
+  \chemfig{ClCH_2CH_2COOH_{(aq)}} \+ \chemfig{H_2O_{(l)}} \arrow{<=>}
+  \chemfig{ClCH_2CH_2COO^{-}_{(aq)}} \+ \chemfig{H_3O^+_{(aq)}}
+  \schemestop
+  \end{center}
+  \normalsize
+
+  \item[c.] Opskriv ligevægtskonstanten $K_s$ for ovenstående reaktion\\
+  Vi ignorere vand i brøken da der er så meget af det.
+  $$K_s=\frac{[ClCH_2CH_2COO^{-}]\cdot[H_3O^+]}{[ClCH_2CH_2COOH]}$$
+
+  \item[d.] Beregn værdien af $K_s$ ud fra $pK_s$\\
+  Jeg benytter formlen
+  $$K_s=10^{-pK_s}$$
+  Jeg indsætter mine værdier
+  $$K_s=10^{-4} \ M$$
+
+  \item[e.] Antag at vi har en 0.20M opløsning af 3-Chlorpropansyre i rent vand.\\
+  Dvs: $c(3-Chlorpropansyre)=0.20 M$
+
+  \begin{itemize}
+    \item Angiv de aktuelle koncentrationer af samtlige opløste ioner.\\
+    Til $[H_3O^+]$ ved jeg fra syrens $pK_s$ at syren er en svag syre.
+    Så jeg bruger formlen.
+    $$K_s=\frac{[H_3O^+]^2}{C_s-[H_3O^+]}$$
+    Jeg udregner formlen da jeg kender $C_s$ og $K_s$ så den eneste ubekendte er $[H_3O^+]$
+    $$[H_3O^+]=-0.004522 \vee 0.004422$$
+    Jeg vælger den positive værdi da det ikke giver mening at have en negativ koncentration.
+    $$[H_3O^+]=0.004422 M$$
+
+    Til $[OH^{-}]$ benytter jeg formlen.
+    $$[H_3O^+]\cdot [OH^{-}]=10^{-14} \ M^2$$
+    Så når jeg indsætter mine værdier.
+    $$[OH^{-}]=\frac{10^{-14} \ M^2}{[H_3O^+]}=\frac{10^{-14} \ M^2}{0.004422 M}=2.261207\cdot 10^{-12} \ M$$
+
+    Og $[ClCH_2CH_2COO^{-}]$ er identisk med $[H_3O^+]$ da de bliver dannet i samme reaktion i samme forhold
+    $$[ClCH_2CH_2COO^{-}]=0.004422 \ M$$
+
+    \item Beregn pH og pOH i opløsningen.\\
+    Til at beregne pH bruger jeg formlen(Til svage syre).
+    $$pH=\frac{1}{2}(pK_s-log(C_s))$$
+    Med mine værdier
+    $$pH=\frac{1}{2}(4-log(0.2))=2.35$$
+
+    Til at beregne pOH bruger jeg formlen.
+    $$pH+pOH=14 \leftrightarrow pOH=14-pH$$
+    med mine værdier
+    $$pOH=14-2.35=11.65$$
+  \end{itemize}
+\end{itemize}
+
+\section{Opg. 2}
+Der fremstilles en 0.12M opløsning af $Ca(OH)_2$ i rent vand.
+\begin{itemize}
+  \item[a.] Beregn koncentrationen af samtlige ioner i opløsningen\\
+  for at beregne $[OH^{-}]$ kigger jeg på selve reaktionen når $Ca(OH)_2$ bliver opløst i vand.
+  \begin{center}
+    \schemestart
+    \chemfig{{Ca(OH)}_{2(s)}} \arrow{->} \chemfig{Ca^{2+}_{(aq)}} \+ \chemfig{2OH^{-}_{(aq)}}
+    \schemestop
+  \end{center}
+  da $Ca(OH)_2$ reagerer fuldstændigt ved vi at $[OH^{-}]$ er dobbelt så stor som $c(Ca(OH)_2)$ da der bliver dannet 2 $OH^{-}$ for hver $Ca(OH)_2$ vi opløser\\
+  Så derfor bliver
+  $$[OH^{-}]=0.24 \ M$$
+  Og ligeledes bliver der dannet én $Ca^{2+}$ for hver $Ca(OH)_2$ vi opløser så den vil blive.
+  $$[Ca^{2+}]=0.12 \ M$$
+  Og så til at beregne $[H_3O^+]$ bruger jeg samme metode som i $Opgave \ 1e$
+  $$[H_3O^+]=\frac{10^{-14} \ M^2}{[OH^{-}]}=\frac{10^{-14} \ M^2}{0.24 M}=4.1\overline{6} \cdot 10^{-14} \ M$$
+
+  \item[b.] Beregn pH og pOH i opløsningen\\
+  For at beregne pOH bruger jeg formlen.
+  $$pOH=-log[OH^{-}]$$
+  med mine værdier
+  $$pOH=-log(0.24 \ M)=0.62$$
+  for at beregne pH bruger jeg formlen.
+  $$pH+pOH=14 \leftrightarrow pH=14-pOH$$
+  med mine værdier
+  $$pH=14-0.62=13.38$$
+\end{itemize}
+
+\section{Opg. 3}
+OBS: i følgende opgaver omhandler stærke syrer og ionforbindelser, som er fuldstændigt opløste.
+\begin{itemize}
+  \item[a.] Beregn pH i den opløsning(Opløsning A), der fremkommer ved at blande 100mL 0.004M $HCl$ med 40mL 0.0015M $HNO_3$\\
+  Jeg starter med at finde hvor mange mol $H_3O^+$ i henholdsvis hver sin blanding
+  Jeg ved at i blandingerne er koncentrationen af $H_3O^+$ den samme som syren da der bliver lavet en $H_3O^+$ når der bliver brugt et molekyle af syren\\
+  dvs. at hvis jeg vil vide hvor mange mol $H_3O^+$ jeg har, skal jeg bare gange der med hvor mange liter jeg har af opløsningen.
+  $$0.004 \ M \cdot 0.1 \ L=0.0004 \ mol$$
+  Det samme gør jeg med opløsningen med $HNO_3$
+  $$0.0015 \ M \cdot 0.04 \ L=0.00006 \ mol$$
+  Nu tager jeg dem og bare lægger dem sammen for at få en samlet mængde af $H_3O^+$
+  $$0.0004 \ mol + 0.00006 \ mol=0.00046 \ mol$$
+  Nu skal jeg bare tage hvor mange mol $H_3O^+$ jeg har og dividerer det med hvor mange liter jeg har i den nye opløsning for at få $[H_3O^+]$
+  $$\frac{0.00046 \ mol}{0.14 \ L}=0.00329 \ M$$
+  Nu kan jeg bruge formlen.
+  $$pH=-log[H_3O^+]$$
+  Med mine værdier
+  $$pH=-log(0.00329 \ M)=2.483$$
+
+  \item[b.] Beregn pH i den opløsning(Opløsning B), der fremkommer ved at blande 25mL 0.002M $KOH$ med 75mL 0.004M $Ba(OH)_2$\\
+  Jeg gør det samme som i $Opgave \ 3a$\\
+  Så antal mol $OH^{-}$ i opløsningen med $KOH$ bliver
+  $$0.002 \ M \cdot 0.025 \ L=0.00005 \ mol$$
+  Og antal mol $OH^{-}$ i opløsningen med $Ba(OH)_2$, men her kommer der 2 $OH^{-}$ ioner for hver $Ba(OH)_2$ vi opløser. Så det bliver
+  $$2 \cdot 0.004 \ M \cdot 0.075 \ L=0.0006 \ mol$$
+  Nu tager jeg dem og bare lægger dem sammen for at få en samlet mængde af $OH^{-}$
+  $$0.00005 \ mol + 0.0006 \ mol=0.00065 \ mol$$
+  Nu tager jeg hvor mange mol $OH^{-}$ jeg har og dividerer det med hvor mange liter jeg har i den nye opløsning
+  $$\frac{0.0065 \ mol}{0.1 \ L}=0.0065 \ M$$
+  Nu bruger jeg formlen.
+  $$pH=14+log[OH^{-}]$$
+  Med mine værdier
+  $$pH=14+log(0.0065)=11.813$$
+
+  \item[c.] Beregn pH og pOH i den opløsning(Opløsning C), der fremkommer ved at blande ovenstående opløsninger sammen(Opløsning A+B)\\
+  Da $H_3O^+$ og $OH^{-}$ reagerer fuldstændigt med hindanden når de to opløsninger blandes sammen kan jeg bare trække de to værdier fra hindanden og den numeriske værdi af differencen er
+  så enten $H_3O^+$ eller $OH^{-}$ det kommer bare an på hvilken en der er mest af. Her er det $OH^{-}$ som der er mest af
+  $$0.00065 \ mol-0.00046 \ mol=0.00019 \ mol$$
+  Nu skal jeg bare tage hvor mange mol $OH^{-}$ jeg har og dividerer der med hvor mange liter jeg har i min nye opløsning for at få $[OH^{-}]$
+  $$\frac{0.00019 \ mol}{0.24 \ L}=0.00079 \ M$$
+  Nu kan jeg bruge formlen.
+  $$pOH=-log[OH^{-}]$$
+  Med mine værdier
+  $$pOH=-log(0.00079)=3.101$$
+  Og for at regne pH bruger jeg formlen.
+  $$pH+pOH=14 \leftrightarrow pH=14-pOH$$
+  Med mine værdier
+  $$pH=14-3.101=10.899$$
+\end{itemize}
+
+\end{document}
