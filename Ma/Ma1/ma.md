@@ -96,7 +96,7 @@ Så finder jeg den kummulerede frekvens
 Så kan jeg plotte dataet ind med Mængden på x-aksen og den kummulerede frekvens på y-aksen og aflæse hvor på grafen henholdsvis 25,
 50 og 75 procent skærer grafen så jeg kan finde kvartilsættet
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png)
+![Sumkurve](figure/unnamed-chunk-4-1.png)
 \pagebreak
 
 Så kan jeg så aflæse kvartilsættet på grafen til at være  
