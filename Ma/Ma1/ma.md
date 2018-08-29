@@ -28,7 +28,7 @@ x & = \frac{-1 \pm \sqrt[]{49}}{2 \cdot 1} = \frac{-1 \pm 7}{2}\\
 x & = -4 \vee x = 3
 \end{align*}
 
-Så løsningen på andengradsligningen er $x = 4 \vee x = -0.5$
+Så løsningen på andengradsligningen er $x = -4 \vee x = 3$
 
 # 9.169
 I et koordinatsystem er to vektorer $\vec{a}$ og $\vec{b}$ bestemt ved
