@@ -28,7 +28,7 @@ x & = \frac{-1 \pm \sqrt[]{49}}{2 \cdot 1} = \frac{-1 \pm 7}{2}\\
 x & = -4 \vee x = 3
 \end{align*}
 
-Så løsningen på andengradsligningen er $x = -4 \vee x = 3$
+Så løsningen på andengradsligningen er $x = 4 \vee x = -0.5$
 
 # 9.169
 I et koordinatsystem er to vektorer $\vec{a}$ og $\vec{b}$ bestemt ved
@@ -96,7 +96,7 @@ Så finder jeg den kummulerede frekvens
 Så kan jeg plotte dataet ind med Mængden på x-aksen og den kummulerede frekvens på y-aksen og aflæse hvor på grafen henholdsvis 25,
 50 og 75 procent skærer grafen så jeg kan finde kvartilsættet
 
-![Sumkurve](figure/unnamed-chunk-4-1.png)
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png)
 \pagebreak
 
 Så kan jeg så aflæse kvartilsættet på grafen til at være  

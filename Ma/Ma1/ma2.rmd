@@ -9,12 +9,16 @@ hvor $N$ er antal smittede til tidspunktet $t$ (målt i døgn). Det oplyses, at 
 
 2. Jeg kan se på differentialligningen at det er logistisk vækst som følger modellen
    $$\frac{dy}{dx}=ay \dot (M - y)$$
-   Så jeg kan bare indsætte værdierne ind i skabelonen
-    \begin{align*}
-    y & = f(x) = \frac{M}{1+ce^{-aMx}}\\
-    N(t) & = \frac{209}{1+ce^{-0.00526 \cdot 209 \cdot t}} = \frac{209}{1+ce^{1.09934t}}
-    \end{align*}
-   Tallet 209 i differentialligningen betyder at $N(t)$ aldrig vil gå over 209 det ville kun kunne komme meget tæt på
+   Så jeg kan bare indsætte værdierne ind i skabelonen 
+   \begin{align*} 
+   y & = f(x) = \frac{M}{1+ce^{-aMx}}\\ 
+   N(t) & = \frac{209}{1+ce^{-0.00526 \cdot 209 \cdot t}} 
+   \end{align*} 
+   Da vi har fået at vide at $N(30) = 103$ kan jeg indsætte det i min formel for at finde værdien af $c$ vha. solve
+   $$solve(\frac{209}{1+ce^{-0.00526 \cdot 209 \cdot 30}}=103,c) = 2.17 \cdot 10^{14}$$
+   Så den endelige formel er
+   $$N(t)=\frac{209}{1+2.17 \cdot 10^{14} \cdot e^{-0.00526 \cdot 209 \cdot t}}$$
+   Tallet 209 i differentialligningen betyder at $N(t)$ aldrig vil gå over 209 det ville kun kunne komme meget tæt på 
 
 #9.200
 Bestem integralet

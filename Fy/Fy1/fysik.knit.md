@@ -3,7 +3,7 @@ output: pdf_document
 header-includes:
     \usepackage{fancyhdr}
     \pagestyle{fancy}
-    \lhead{Mads, Christian, Jeppe og Marius  Atwoods faldmaskine}
+    \lhead{Mads, Christian, Jeppe, Marius  Atwoods faldmaskine}
     \rhead{7/9-2018}
 ---
 
@@ -13,11 +13,8 @@ header-includes:
    $$F{res} = m \cdot a$$
    Fordi vi kender både masseforskellen og accellerationen. Vi skal kun bruge masseforskellen fordi hvis de havde samme vægt ville vores pulley ikke dreje, så det er kun fordi det ene lod vejer mere end det andet at det bliver trukket nedad.  
    
-   <center>
+   ->![Atwoods Faldmaskine diagram](diagram.pdf)<-
 
-   ![Atwoods Faldmaskine diagram](diagram.pdf)
-
-   </center>
    <center>
 
    ![Grafer for (a, $F_{res}$)](opgave1.pdf)

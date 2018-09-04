@@ -1,0 +1,26 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}
+    \draw (2, 0) circle (2 cm);
+    \draw (0, 0) -- (0, -4);
+    \draw (4, 0) -- (4, -2.75);
+    \draw (-0.5, -4) rectangle (0.5, -5);
+    \draw (3.5, -2.75) rectangle (4.5, -4.25);
+
+    \node at (0, -4.5) {$M_{1}$};
+    \node at (4, -3.50) {$M_{2}$};
+
+    \node[circle, fill, inner sep=2pt] at (-1.5, -4.5){};
+    \node[circle, fill, inner sep=2pt] at (5.5, -3.50){};
+
+    \draw[very thick, ->] (-1.5, -4.5) -- (-1.5, -1.5) node[anchor = south west]{$F_{M_2}$};
+    \draw[very thick, ->] (-1.5, -4.5) -- (-1.5, -6.5) node[anchor = south west]{$F_{M_1}$};
+    \draw[very thick, ->] (5.5, -3.50) -- (5.5, -1.50) node[anchor = south west]{$F_{M_1}$};
+    \draw[very thick, ->] (5.5, -3.50) -- (5.5, -6.50) node[anchor = south west]{$F_{M_2}$};
+\end{tikzpicture}
+
+\end{document}
