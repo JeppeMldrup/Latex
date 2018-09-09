@@ -70,6 +70,7 @@ c. Bestem $C'(15)$, og giv en fortolkning af dette tal
    $$C'(t)=0.4-0.02C \Rightarrow C'(15)=0.4-(0.02 \cdot 5.18)=0.30 \ \frac{ppm}{t}$$
    Så væksthastigheden til tiden 15 er $0.30 \ \frac{ppm}{t}$
 
+
 ## 9.221
 En funktion $f$ er bestemt ved  
 $$f(x)=3x + \frac{1}{x}, \ x>0$$  
@@ -83,4 +84,26 @@ a. Bestem arealet af $M$.
    $$V = \int_a^b (f(x)-g(x)) \ dx$$  
    Til at finde arealet af punktmængden mellem de to grafer  
    $$V = \int_{\frac{1}{3}}^{1} (4 - (3x + \frac{1}{x})) \ dx = 0.23$$  
-   Så arealet af punktmængden er cirka $0.23$
+   Så arealet af punktmængden er cirka $0.23$  
+
+b. Bestem rumfanget af det omdrejningslegeme, der fremkommer, når $M$ drejes $360^{\circ}$ om førsteaksen.  
+   For at bestemme rumfanget skal jeg bruge formlen  
+   $$V = \pi \int_a^b (f(x))^2 \ dx$$  
+   Men fordi det er rumfanget af punktmængdens omdrejningslegeme og ikke bare hele området under graferne skal jeg tage hele området under den øverste graf($f_1(x)=4$)
+   og trække hele området under den nederste graf fra($f_2(x)=3x + \frac{1}{x}$)  
+   Så derfor bliver $f(x)=f_1(x)-f_2(x)$ og formlen bliver derfor  
+   $$V = \pi \int_a^b (f_1(x)-f_2(x))^2 \ dx$$  
+   Så indsætter jeg bare mine værdier  
+   $$V = \pi \int_{\frac{1}{3}}^{1} (4 - (3x + \frac{1}{x}))^2 \ dx = 0.314$$  
+   Så rumfanget af omdrejningslegemet der fremkommer af punktmængden $M$ er $0.314$  
+
+## 9.223
+Grafen for en funktion $f$ går gennem punktet $P(0, 3)$. Funktionen $f$ har den egenskab, at i ethvert punkt $(x, f(x))$ på grafen er tangentens hældningskoefficient proportional med $f(x)$. Proportionalitetskonstanten er 0.17.  
+
+a. Bestem hældningskoefficienten for tangenten til grafen for $f$ i punktet $P$, og opstil en differentialligning der har $f$ som løsning.  
+   Vi ved at hældningskoefficienten $\frac{df}{dx}$ er proportional med $f(x)$. dvs. at $\frac{df}{dx} = k \cdot f$.
+   Derudover ved vi også at proportionalitetskonstanten $k$ der er ganget på $f$ er $0.17$ så derfor bliver vores formel for hældningskoefficienten eller differentialligningen.  
+   $$\frac{df}{dx}=0.17f$$  
+   For at finde hældningskoefficienten til punktet $P(0, 3)$ bruger vi så bare differentilligningen og indsætter $3$ ind på $f$'s plads i højre side.  
+   $$\frac{df}{dx}=0.17 \cdot 3 \Leftrightarrow \frac{df}{dx}=0.51$$  
+   Så hældningskoefficienten til punktet $P(0, 3)$ er $0.51$
