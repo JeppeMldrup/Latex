@@ -1,21 +1,19 @@
 mydata <- read.csv('Opgave1.csv')
-m1 <- c(0.020)
-m2 <- c(0.030)
-a1 <- mydata$acc[!is.na(mydata$acc)]
-a2 <- mydata$acc2[!is.na(mydata$acc2)]
-fres1 <- a1*m1
-fres2 <- a2*m2
 
-fit1 <- lm(fres1 ~ a1)
-fit2 <- lm(fres2 ~ a2)
 
-par(mfrow = c(1, 2))
-plot(a1, fres1, main="20g forskel", xlab = "Acceleration", ylab = expression(F[res]))
-grid()
-abline(fit1)
-plot(a2, fres2, main="30g forskel", xlab = "Acceleration", ylab = expression(F[res]))
-grid()
-abline(fit2)
+fit <- lm(mydata$hast ~ mydata$ltime)
+fit2 <- lm(mydata$hast2 ~ mydata$ltime2)
 
-coef(fit1)
-coef(fit2)
+coe <- coef(fit)
+coe2 <- coef(fit2)
+
+acc <- 0.140*coe[2]
+acc2 <- 0.140*coe2[2]
+
+fit3 <- lm(c(acc, acc2) ~ c(coe[2], coe2[2]))
+coe3 <- coef(fit3)
+
+coe3[2]
+
+plot(c(coe[2], coe2[2]), c(acc, acc2), xlab = "a", ylab = expression(F[res]))
+abline(fit3)

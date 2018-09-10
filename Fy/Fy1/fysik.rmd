@@ -8,30 +8,49 @@ header-includes:
 ---
 
 #Atwoods faldmaskine
+
 1. I del 2 beregnes $F_{res}$, der er konstant. Tegn $(a, F_{res})$ grafen. Bestem liniens hældning og sammenlign denne med den samlede masse  
-   For at finde $F_{res}$ benytter vi formlen
-   $$F{res} = m \cdot a$$
-   Fordi vi kender både masseforskellen og accellerationen. Vi skal kun bruge masseforskellen fordi hvis de havde samme vægt ville vores pulley ikke dreje, så det er kun fordi det ene lod vejer mere end det andet at det bliver trukket nedad.  
+   Vi starter med at finde accelerationen for loddene i de forskellige måleserier. Dette gør vi ved at plotte hastighedsfunktionen og finde hældningskoefficienten.
+   Da den er accelerationen  
+   ![](opgave1.pdf)
+   Vi har fundet accelerationerne til at være $2.213$ og $2.760$  
+   Nu kan vi så finde $F_{res}$ for de to punkter og plotte dem i et diagram.  
+   ![](opgave1acc.pdf)
+   Vi har fundet hældningen til at være $0.14$ og da $F_{res}=(M_1+M_2) \cdot a$ svarer det til en samlet masse på 140 gram. Den samlede masse for vores måleserier er 140 gram, så det passer helt perfekt.  
    
-   <center>
-
-   ![Atwoods Faldmaskine diagram](diagram.pdf)
-
-   </center>
-   <center>
-
-   ![Grafer for (a, $F_{res}$)](opgave1.pdf)
-
-   </center>
-   
-   \pagebreak
-
-   Vi har undersøgt grafernes hældning, og hældningen for graf 1(20g forskel) er $a=20$  
-   Og hældningen for graf 2(30g forskel) er $a=30$  
-   Så hældningen for grafen er den samme som masseforskellen mellem de to lodder. Som giver mening da funktionen for grafen er $F_{res}=m \cdot a$
-
 2. I del 3 tegnes en $\left( \frac{1}{M_{1}+M_{2}},a \right)$ graf. Ser grafen ud som forventet? Bestem liniens hældning og sammenlign denne med $F_{res}$  
+   Igen starter vi med at finde accellerationen af loddene for de to forskellige måleserier.  
+   ![](opgave2.pdf)  
+   ![](opgave2acc.pdf)  
+   Så tegner vi $(\frac{1}{M_1+M_2}, a)$ grafen og finder hældningen. Hældningen har vi fundet til at være 0.62.  
+   For at kunne sammenligne den med $F_{res}$ skal vi først udregne $F_{res}$ for de tre måleserier. Til at udregne krafterne bruger vi formlen  
+   $$F_{res}=(M_1+M_2) \cdot a$$
+   Så vi udregner de tre krafter til at være  
+   $$F_{1}=0.150 \ kg \cdot 0.52 \ \frac{m}{s^2}=0.078 \ N$$
+   $$F_{2}=0.110 \ kg \cdot 0.62 \ \frac{m}{s^2}=0.069 \ N$$
+   $$F_{3}=0.070 \ kg \cdot 0.98 \ \frac{m}{s^2}=0.069 \ N$$
+   Så hvis vi sammenligner de tre med hældningen af grafen som var 0.62. Ser vi at de er relativt tætte på hinanden.  
 
 3. Konkluder på gyldigheden af Newtons 2. lov.f  
+   Hvis vi kigger på vores sammenligning af krafterne fra del 2. ser vi at de er meget tæt på hinanden. Og derfor hvis vi kigger bort fra fejlkilder kan vi konkludere at newtons 2. lov passer meget godt til virkeligheden. 
 
 4. Undersøg om den mekaniske energi er bevaret under bevægelsen. Kommenter resultatet.  
+   Da mekanisk energi er potentiel energi og kinetisk energi lagt sammen, finder vi den mekanske energi for de to lodder ved først at finde potentiel og kinetisk energi med formlerne  
+   $$E_{potentiel}=m \cdot g \cdot h$$
+   $$E_{kinetisk} = m \cdot v^2$$
+   Det gør vi så med alle vores sted og hastigheds værdier og derefter lægger dem sammen for at finde den mekaniske energi til alle punkter. Hvis den mekaniske energi skulle bevares ville differensen mellem disse mekaniske energier være 0. Så vi trækker dem fra hinanden.  
+    ```{r, echo=FALSE}
+    mydata <- read.csv("opgave4.csv")
+
+    ke <- 0.060*mydata$hast*mydata$hast
+    ke2 <- 0.050*mydata$hast*mydata$hast
+    pot <- 0.060*mydata$sted*9.82
+    pot2 <- 0.050*mydata$sted*9.82
+
+    mek <- ke+pot-ke2-pot2
+
+    kable(mek)
+    ```
+   Som vi kan se så er de ikke nul, men de stiger faktisk en lille smule for hver gang. Problemet er at vores værdier for hastigheden ikke er målt, men de er udregnet af capstone, og derfor er punkter ikke til samme tid som stedet.
+
+
