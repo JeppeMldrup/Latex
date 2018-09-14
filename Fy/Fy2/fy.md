@@ -1,10 +1,10 @@
 ---
 header-includes:
-	\usepackage{fancyhdr}
-	\pagestyle{fancy}
-	\lhead{Jeppe Møldrup}
-	\chead{Fysik aflevering 2}
-	\rhead{17-9/2018}
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \lhead{Jeppe Møldrup}
+    \chead{Fysik aflevering 2}
+    \rhead{17-9/2018}
 ---
 
 # Fysik aflevering 2
@@ -104,31 +104,69 @@ hvor kasteren slap den.
 b. Vurdér med hvilken vinkel lidt under vandret bolden skal kastes, når battet
    rammer bolden $1.26 \ m$ lavere end, hvor den blev sluppet.  
    
-   Jeg kender to punkter for bolden, nemlig startstedet $(0, 0)$ og der hvor
-   bolden rammer battet $(18.4, 1.26)$ Så jeg påfører regression i form
-   af en andengradsligning på de to punkter.  
+
+## Opgave 4
+
+En sous vide tilstuttes lysnettet. Strømstyrken gennem sous vide'ens varmelegeme er 
+$5.22 \ A$, nå spændingsfaldet over det er $230 \ V$.  
+
+a. Bestem varmelegemets resistans.
    
-   ```r
-   x = c(0, 18.4)
-   y = c(0, 1.26)
+   For at finde resistansen bruger jeg formlen  
+   $$U = I \cdot R$$  
+   hvor $U$ er spændingsfaldet, $I$ er strømstyrken og $R$ er resistansen. Så
+   jeg isolerer resistansen.  
+   $$R = \frac{U}{I} \Leftrightarrow R = \frac{230 \ V}{5.22 \ A} = 44.1 \ \Omega$$
+   Så varmelegemels resistans er $44.1 \ \Omega$  
+
+En sous vide opvarmer $8.2 \ kg$ vand i en gryde. Tabellen viser vandets temperatur $T$
+som funktion af tiden $t$ efter, at sous vide'en er tændt. Stuetemperaturen er $20.9^(\circ)C$  
+
+
+|    s|    t|
+|----:|----:|
+|    0| 12.9|
+|   45| 14.9|
+|   90| 16.7|
+|  180| 19.9|
+|  300| 23.9|
+|  600| 33.5|
+|  900| 42.9|
+| 1500| 57.0|
+
+b. Benyt tabellens data til at vurdere, med hvilken effekt sous vide'en tilfører
+   energi til vandet.  
    
-   fit = nls(y ~ a*x*x+b*x, data=data.frame(x, y), start = list(a = -1, b = -1))
-   ```
+   Jeg starter med at tage formlen for energien det tager for opvarmning af et stof  
+   $$Q=m \cdot c \cdot \Delta T$$  
+   Jeg kender massen, vands specifikkevarmekapacitet($4180 \ \frac{kJ}{kg \cdot \Delta K}$)
+   og for at finde $\Delta T$ til tidspunkterne tager jeg bare temperaturen til
+   punktet minus temperaturen til punktet før, og det samme gør jeg til tiden
+   så jeg kan få punkterne som $(\Delta t, \Delta T)$  
+
+
+|  ds|   dt|
+|---:|----:|
+|  45|  2.0|
+|  45|  1.8|
+|  90|  3.2|
+| 120|  4.0|
+| 300|  9.6|
+| 300|  9.4|
+| 600| 14.1|
    
-   ```
-   ## Error in nlsModel(formula, mf, start, wts): singular gradient matrix at initial parameter estimates
-   ```
-   
-   ```r
-   plot(x, y)
-   ```
-   
-   ![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1-1.png)
-   
-   ```r
-   abline(fit)
-   ```
-   
-   ```
-   ## Error in abline(fit): object 'fit' not found
-   ```
+   Nu kan jeg bruge formlen  
+   $$Q = m \cdot c \cdot \Delta T$$  
+   til at finde den tilførte energi til hvert tidspunkt  
+
+
+|  ds|   dt|        q|
+|---:|----:|--------:|
+|  45|  2.0|  68552.0|
+|  45|  1.8|  61696.8|
+|  90|  3.2| 109683.2|
+| 120|  4.0| 137104.0|
+| 300|  9.6| 329049.6|
+| 300|  9.4| 322194.4|
+| 600| 14.1| 483291.6|
+    
