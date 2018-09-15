@@ -50,9 +50,9 @@ a. Tildel passende værdier til relecante fysiske størrelser, og brug disse til
    og indsætter i den anden ligning  
    $$150 = -0.5 \cdot t^2 + t^2 = t^2(-0.5+1) = 0.5 \cdot t^2$$
    Så finder jeg t  
-   $$t = sqrt(300)$$
+   $$t = \sqrt{300}$$
    Nu kan jeg finde $v_0$ fra den anden ligning
-   $$v_0 = t \Leftrightarrow v_0 = sqrt(300) = 17.32 \ \frac{m}{s}$$  
+   $$v_0 = t \Leftrightarrow v_0 = \sqrt{300} = 17.32 \ \frac{m}{s}$$  
    Så pucken ville have en starthastighed på $17.32 \ \frac{m}{s}$
 
 ## Opgave 2
@@ -120,7 +120,7 @@ a. Bestem varmelegemets resistans.
    Så varmelegemels resistans er $44.1 \ \Omega$  
 
 En sous vide opvarmer $8.2 \ kg$ vand i en gryde. Tabellen viser vandets temperatur $T$
-som funktion af tiden $t$ efter, at sous vide'en er tændt. Stuetemperaturen er $20.9^(\circ)C$  
+som funktion af tiden $t$ efter, at sous vide'en er tændt. Stuetemperaturen er $20.9^{\circ}C$  
 
 
 |    s|    t|
@@ -137,36 +137,21 @@ som funktion af tiden $t$ efter, at sous vide'en er tændt. Stuetemperaturen er 
 b. Benyt tabellens data til at vurdere, med hvilken effekt sous vide'en tilfører
    energi til vandet.  
    
-   Jeg starter med at tage formlen for energien det tager for opvarmning af et stof  
-   $$Q=m \cdot c \cdot \Delta T$$  
-   Jeg kender massen, vands specifikkevarmekapacitet($4180 \ \frac{kJ}{kg \cdot \Delta K}$)
-   og for at finde $\Delta T$ til tidspunkterne tager jeg bare temperaturen til
-   punktet minus temperaturen til punktet før, og det samme gør jeg til tiden
-   så jeg kan få punkterne som $(\Delta t, \Delta T)$  
-
-
-|  ds|   dt|
-|---:|----:|
-|  45|  2.0|
-|  45|  1.8|
-|  90|  3.2|
-| 120|  4.0|
-| 300|  9.6|
-| 300|  9.4|
-| 600| 14.1|
-   
-   Nu kan jeg bruge formlen  
-   $$Q = m \cdot c \cdot \Delta T$$  
-   til at finde den tilførte energi til hvert tidspunkt  
-
-
-|  ds|   dt|        q|
-|---:|----:|--------:|
-|  45|  2.0|  68552.0|
-|  45|  1.8|  61696.8|
-|  90|  3.2| 109683.2|
-| 120|  4.0| 137104.0|
-| 300|  9.6| 329049.6|
-| 300|  9.4| 322194.4|
-| 600| 14.1| 483291.6|
-    
+   Jeg starter med at påføre andengradsregression på mit data
+    ![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png)
+   Nu differentierer jeg funktionen for at få hældningen til grafen $\frac{\Delta t}{\Delta s}$
+   $$\frac{dt}{ds}=0.0380082 - 0.0000116309 \cdot t$$  
+   Nu kan jeg så finde hældningen til punktet hvor temperaturen er $20.9^{\circ}C$
+   fordi det er stuetemperaturen, dvs. at omgivelserne ikke ændrer på temperaturen i
+   dette punkt  
+   $$solve(t(s)=20.9,t) \leftarrow s = 211.54$$
+   $$t'(211.54)=0.0380082 - 0.0000116309 \cdot 211.54=0.0355 \ \frac{\Delta t}{\Delta s}$$  
+   Nu har jeg temperaturændringen for punktet og kan derfor bruge formlen  
+   $$Q=m \cdot c \cdot \Delta T$$
+   Til at finde energien  
+   $$Q = 8.2 \ kg \ cdot 4186 \ \frac{kJ}{kg \cdot \Delta T} \cdot
+   0.0355 \ \frac {\Delta t}{\Delta s} = 1220 \ \frac{kJ}{\Delta s}$$  
+   Da min temperaturændring er hældningen for tangenten til punktet, dvs. hvis man
+   går én ud ad x-aksen, skal man gå hældningen op ad y-aksen, dvs. ét sekund ud.
+   Så derfor er mit svar i $\frac{kJ}{s}$ eller kilowatt.  
+   Så sous vide'en tilfører energi til vandet med effekten $1220 \ kW$
