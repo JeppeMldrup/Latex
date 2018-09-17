@@ -1,0 +1,55 @@
+# Fysik SK-dag
+
+## Opgave 1
+
+På billedet ses et fly, der trækker et reklamebanner efter sig. Flyet flyver med konstant hastighed. Reklamebanneret har massen $19.2 \ kg$  
+
+a. Indtegn på bilag nr. 2 pile, der viser størrelse og retning af de tre kræfter, der virker på reklamebanneret.  
+   
+   ![](opg1diag.pdf)
+
+   Vi udregner størrelserne på kræfterne  
+   $$F_{tyngde}=m \cdot g=19.2 \ kg \cdot 9.82 \ \frac{m}{s^2}=188 \ N$$  
+   $$F_{vind}=\frac{188 \ N}{\tan(11^{\circ})}=967 \ N)$$  
+   $$F_{træk} = \frac{188 \ N}{\sin(11^{\circ})}=985 \ N=985 \ N$$  
+
+## Opgave 2
+
+Pacemakeren består af en spændingskilde samt en resistor med resistensen $450 \ \Omega$. Når pacemakeren sender et elektrisk signal gennem hjertet,
+er strømstyrken $8.9 \ mA$.  
+
+a. Bestem spændingsfaldet over hjertet, når pacemakeren sender et elektrisk signal gennem hjertet.  
+   Hjertet virker som en resistor der er koblet i serie med den anden resistor, så vi finder først spændingsfaldet for resistoren med formlen  
+   $$U = I \cdot R \Leftrightarrow U = 8.9 \ ms \cdot 450 \ \Omega = 4.005 \ V$$  
+   Da hele spændingsfaldet er summen af resistornes spændingsfald som er koblet i serie, er hjertets spændingsfald bare hele spændingsfaldet minus
+   den anden resistors  
+   $$6.5 \ V - 4.005 \ V = 2.5 \ V$$  
+   Så spændingsfaldet over hjertet er cirka $2.5 \ V$  
+
+Pacemakeren kan i alt levere energien $3.5 \ kJ$ til hjertet. Energien bliver afsat i form af små elektriske signaler med varigheden $0.50 \ ms$
+og med en konstant strømstrke på $8.9 \ mA$.  
+
+Hjertet slår i gennemsnit $74$ slag pr. minut
+
+b. Vurdér, hvor lang tid pacemakeren kan levere energi til hjertet.  
+   Vi starter med at finde mængden af energi per slag ved først at tage arealet under grafen for at finde spændingsfaldet.  
+   $$1 \ tern: \ 0.5 \ ms \cdot 0.5 \ V=0.25 \ ms \cdot V$$
+   $$4.5 \ tern: \ 4.5 \cdot 0.25 \ ms \cdot V=1.125 \ ms \cdot V$$  
+   Hver puls tager $0.5 \ ms$ så vi dividere med $0.5 \ ms$  
+   $$\frac{1.125 \ ms \cdot V}{0.5 \ ms}=2.25 \ V$$  
+   Så spændingsfaldet er $2.25 \ V$  
+   Nu kan vi gange det med strømstyrken for at få det i effekten.  
+   $$2.25 \ V \cdot 8.9 \ mA = 0.02 \ W$$  
+   Igen tager hver puls $0.5 \ ms$ så vi ganger med $0.5 \ ms$ for at få energien.  
+   $$0.02 \ W \cdot 0.5 \ ms = 0.00001 \ J$$
+   Da hjertet slår 74 gange i minuttet kan vi gange med 74 for at finde energien over 1 minut.  
+   $$0.00001 \ J \cdot 74=0.00074 \ \frac{J}{minut}$$
+   Så kan vi dividere det med $60$ for at få det i $\frac{J}{s}$ eller $W$  
+   $$\frac{0.00074 \ \frac{J}{minut}}{60}=0.000012 \overline{3} \ W$$  
+   Nu kan vi bruge formlen  
+   $$W=\frac{J}{s} \Leftrightarrow s=\frac{J}{W}$$
+   Så vi indsætter vores værdier  
+   $$s=\frac{3500 \ J}{0.000012 \overline{3}}=283783783.784 \ s$$
+   Så omregner jeg sekunder til år
+   $$283783783.784 \ \approx 9 \ år$$
+   Så pacemakeren kan levere strøm til hjertet i cirka 9 år inden batteriet skal skiftes.

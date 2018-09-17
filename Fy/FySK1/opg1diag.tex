@@ -1,0 +1,34 @@
+\documentclass[18pt]{standalone}
+
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing}
+
+\tikzset{snake it/.style={decorate, decoration={snake, segment length = 100, amplitude = 7}}}
+
+\begin{document}
+
+\LARGE
+
+\begin{tikzpicture}
+
+    \draw[thick, snake it] (-4, -1.5) -- (4, -1.5);
+    \draw[thick, snake it] (-4, 1.5) -- (4, 1.5);
+    \draw[thick] (-4, 1.5) -- (-4, -1.5);
+    \draw[thick] (4, 1.5) -- (4, -1.5);
+    
+    \draw[very thick, ->] (-4, 0) -- (-14, 2);
+    \node[anchor = south west] at (-8.9, 1.1) {$F_{træk}=985 \ N$};
+
+    \node[anchor = north east] at (-8.75, 0.75) {$11^{\circ}$};
+    \draw[thick, dashed] (-4, 0) -- (-10, 0);
+    \draw[thick, dashed] (-10, 0) arc (180:168.5:6);
+
+    \node[draw, circle, inner sep=2pt, fill] at (0, 0){};
+    \draw[very thick, ->] (0, 0) -- (0, -3) node[anchor = north]{$F_{tyngde}=188 \ N$};
+    \draw[very thick, ->] (0, 0) -- (8, 0) node[anchor = west]{$F_{vind}=967 \ N$};
+
+
+\end{tikzpicture}
+
+\end{document}

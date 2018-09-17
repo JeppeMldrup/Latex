@@ -1,0 +1,17 @@
+---
+header-includes:
+    \usepackage{chemfig}
+    \usepackage{fancyhdr}
+---
+
+#Kemi aflevering 1
+
+## Opgave 1
+
+\begin{equation}
+\chemname{\chemfig{H_3C-[1]CH_2-[-1]CH_2-[1]C(=[2]O)-[-1]O-[1]CH_2-[-1]CH_3}}{Dufter af ananas}
+\end{equation}
+
+\begin{equation}
+\chemname{\chemfig{H_3C-[1]C(=[2]O)-[-1]O-[1]CH_2-[-1]CH_2-[1]CH_2-[-1]CH_2-[1]CH_3}}{Dufter af banan}
+\end{equation}
