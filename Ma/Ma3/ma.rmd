@@ -34,3 +34,62 @@ $$y = x + 1 \Leftrightarrow y = 2 + 1 = 3 \vee y = -2 + 1 = -1$$
 
 Så de to punkter hvor cirklen og linjen skærer hinanden er $(2, 3)$ og $(-2, -1)$
 
+## 1.006
+
+En cirkel har centrum i punktet $C(3,-2)$ og gå gennem punktet $P(0,2)$.  
+Bestem en ligning for tangenten til cirklen i punktet $P$.
+
+Jeg ved fra afstandsfunktionen mellem en cirkels centrum og en linje
+at linjen mellem centrum og punktet $P$ ligger retvinklet på tangenten
+til punktet $P$. Så jeg kan bruge vektor $\vec{PC}$ som min normalvektor.
+Og så kan jeg bruge skabelonen
+$$a(x-x_0)+b(y-y_0)=0$$
+Hvor $a$ og $b$ er koordinaterne til min normalvektor.  
+$$3(x-0)-4(y-2)=0 \Leftrightarrow 3x-4y+8=0 \Leftrightarrow y=\frac{3}{4}x+2$$
+Så linjens ligning vil være $y=\frac{3}{4}x+2$
+
+## 1.049
+
+En funktion $f$ er bestemt ved
+$$f(x)=7\ln(x)-2x^2$$
+Bestem en ligning for tangenten til grafen for $f$ i punktet $P(1, f(1))$
+
+Jeg starter med at differentiere funktionen $f$
+$$f'(x)=(7\ln(x)-2x^2)'=\frac{7}{x}-4x$$
+Så indsætter jeg 1 ind i den differentierede funktion for at finde hældningen
+til punktet $P$
+$$f'(x)=\frac{7}{1}-4 \cdot 1=7-4=3$$
+Så hældningen til ligningen for tangenten til punktet $P$ er $3$  
+Så jeg indsætter det i en formel for lineær vækst
+$$y=3x+b$$
+Nu finder jeg den tilhørerne y-værdi til x-værdien $1$ ved at indsætte $1$
+ind i funktion $f$
+$$f(1)=7\ln(1)-2\cdot 1^2 = -2$$
+Så punktet $P$ er altså $P(1, -2)$  
+Jeg indsætter det i den lineære formel og isolerer b
+$$-2=3\cdot 1+b \Leftrightarrow b=-5$$
+Så ligningen for tangenten til grafen for $f$ i punktet $P$ er $y=3x-5$
+
+##1.074
+
+Gøre rede for, hvilken graf der hører til hvilken funktion
+
+Den røde graf hører til $f(x)$ fordi den blå graf har en negativ hældning i starten
+mens den røde graf aldrig kommer under 0 på y-aksen så den kan ikke være den afledte
+funktion til den blå.
+
+##9.217
+
+Ved genoptræning af en patient efter en korsbåndsoperation i knært anvendes en maskine, som bøjer patientens knæ.
+I tabellen ses sammenhørende værdier af den vinkel, som knæet køjes med, og den kraftpåvirkning, der registreres
+i det nye korsbånd.
+
+| Vinkel(grader)        | 20    | 40    | 60    | 80    |
+| ---                   | ---   | ---   | ---   | ---   |
+| Kraftpåvirkning(N)    | 0.035 | 0.063 | 0.085 | 0.10  |
+
+I en model antages des, at kraftpåvirkningen i korsbåndet som funktion af vinklen er af typen
+$$f(x)=b \cdot x^a, \qquad 0\leq x\leq 90$$
+hvor $f(x)$ betegner kraftpåvirkningen(målt i N) ved vinklen $x$(målt i grader).
+
+a. 

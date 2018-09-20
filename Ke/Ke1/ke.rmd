@@ -1,17 +1,205 @@
 ---
 header-includes:
     \usepackage{chemfig}
+    \usepackage{tikz}
     \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \lhead{Jeppe Møldrup}
+    \chead{Kemi Aflevering 1}
+    \rhead{24/7-2018}
 ---
 
-#Kemi aflevering 1
+# Kemi aflevering 1
 
 ## Opgave 1
 
 \begin{equation}
-\chemname{\chemfig{H_3C-[1]CH_2-[-1]CH_2-[1]C(=[2]O)-[-1]O-[1]CH_2-[-1]CH_3}}{Dufter af ananas}
+\chemname{
+    \chemfig{H_3C-[1]CH_2-[-1]CH_2-[1]C(=[2]O)-[-1]O-[1]CH_2-[-1]CH_3}}
+    {Figur 1: Dufter af ananas}
+\label{f1-1}
 \end{equation}
 
 \begin{equation}
-\chemname{\chemfig{H_3C-[1]C(=[2]O)-[-1]O-[1]CH_2-[-1]CH_2-[1]CH_2-[-1]CH_2-[1]CH_3}}{Dufter af banan}
+\chemname{
+    \chemfig{H_3C-[1]C(=[2]O)-[-1]O-[1]CH_2-[-1]CH_2-[1]CH_2-[-1]CH_2-[1]CH_3}}
+    {Figur 2: Dufter af banan}
+\label{f1-2}
 \end{equation}
+
+a. Anfør systematiske navne for de to estere  
+   
+   - Figur \ref{f1-1}  
+   
+     En ester har formlen  
+     \chemfig{R_1-[1]C(=[2]O)-[-1]OR_2}  
+     Så $R_1$ i figur \ref{f1-1} ville være  
+     butan: \chemfig{CH_3-CH_2-CH_2-C}  
+     Og $R_2$ ville være  
+     ethan: \chemfig{CH_2-CH_3}  
+     Syren i esteren er altså butansyre og alkoholen er ethanol så figur \ref{f1-1} har
+     det systematiske navn butansyreethylester  
+   
+   - Figur \ref{f1-2}  
+
+     Ligeledes er $R_1$ i figur \ref{f1-2}  
+     ethan: \chemfig{CH_3-C}  
+     Og $R_2$ ville være  
+     pentan: \chemfig{CH_2-CH_2-CH_2-CH_2-CH_3}  
+     Syren i esteren er altså ethansyre og alkoholen er pentan-1-ol så figur \ref{f1-2}
+     har det systematiske navn ethansyrepentylester
+
+Stof B(Figur \ref{f1-2}) fremstilles ifølge nedenstående reaktionsskema  
+\begin{multline*}
+\schemestart
+\chemfig{C(-[5]H_3C)(=[2]O)-[7]OH}
+\+
+\chemfig[yshift=-1em]{H_3C-[1]CH_2-[-1]CH_2-[1]CH_2-[-1]CH_2-[1]OH}
+\arrow{->[Kondensering]}[,1.5]
+\schemestop
+\\
+\schemestart
+\chemfig[yshift=-2em]{H_3C-[1]C(=[2]O)-[-1]O-[1]CH_2-[-1]CH_2-[1]CH_2-[-1]CH_2-[1]CH_3}
+\+
+\chemfig{H_2O}
+\schemestop
+\end{multline*}
+
+b. Reaktionen danner esteren fra figur \ref{f1-2} og reaktionstypen er en kondensationsreaktion
+   da der bliver dannet vand under reaktionen
+
+Der findes mange estere med formlen \chemfig{CH_3COOC_5H_{11}}, hvoraf flere har frugtduft. Disse
+estere er isomere med stof B, og de kan dannes ud fra den samme carboxylsyres reaktion
+med forskellige alkoholer.  
+
+c. Anfør strukturformler for to mulige alkoholer, der kan indgå i dannelsen af de
+   nævnte estere. Den ene alkohol skal være primær og må ikke indeholde et
+   asymmetrisk C-atom, mens den anden alkohol skal være sekundær og indeholde
+   netop et asymmetrisk C-atom. Det asymmetriske C-atom skal markeres.
+
+   Den primære alkohol der kan indgå i dannelsen er den vi har i figur \ref{f1-2}
+   så den er  
+   \chemfig{CH_3-[1]CH_2-[-1]CH_2-[1]CH_2-[-1]CH_2-[1]OH}  
+   Den anden kunne f.eks være  
+
+   \chemfig{CH_3-CH_2-CH_2-{\color{red}C}(-[2]OH)(-[-2]H)-CH_3}  
+
+   Hvor det røde carbon atom er det asymmetriske carbon atom
+
+Andre estere dufter af blomster.
+Strukturen af en blomsterduftende ester, C, skal bestemmes
+ved hjælp af spektroskopi.
+
+d. Gør rede for karakteristiske absorptionsbånd over 1500 cm–1 i IR-spektret, idet
+   du inddrager hybridisering.  
+   Forklar, hvilke bidrag IR-spektret giver til opklaringen af esterens struktur.  
+
+   ved cirka 1745 har vi det karakteristiske bånd for C=O strækninger i estere  
+   ved omkring 3000 har vi de typiske C-H strækninger
+
+e. Bestem strukturformlen for C. Argumenter ud fra integralkurve, kemiske skift
+   og koblingsmønstre.  
+   
+   Signal   | Aflæst skift  | Areal | Opsplitning   | Naboer    |
+    ---     | ---           | ---   | ---           | ---       |
+   1        | 7.45          | 5     | Singlet       | 0         |
+   2        | 5.1           | 2     | Singlet       | 0         | 
+   3        | 2.3           | 2     | Triplet       | 2         | 
+   4        | 1.6           | 2     | Sekstet       | 5         | 
+   5        | 0.95          | 3     | Triplet       | 2         |
+   
+   Signal   | Tilordning                | Tabel skift
+    ---     | ---                       | ---
+   1        | \chemfig{Ar-H}            | 6.5-8
+   2        | \chemfig{-C-CH_2-Ar}      | 2.6
+   3        | \chemfig{-C-CH_2-C~C}  | 2.2
+   4        | \chemfig{-C-CH_2-C-O-CO-} | 1.6
+   5        | \chemfig{CH_3-C-}         | 0.9
+
+   Grunden til at det kemiske skift fra tabelleng i signal 2 er så meget lavere
+   end den aflæste er fordi i den aflæste binder carbonet direkte til esteren
+   så den er ret tæt på en \chemfig{C=O} og derfor har den lavere skærmning.  
+   Så mit gæt på strukturformlen er  
+
+   \chemfig{H-**6(-(-H)-(-H)-(-CH_2-C(=[1]O)-[-1]O-[0]C~[1]C-[-1]CH_2-[1]CH_2-[-1]CH_3)-(-H)-(-H)-)}
+
+## Opgave 3
+
+Stof A anvendes i solbeskyttende cremer.
+Stoffet kan absorbere solens ultraviolette
+stråler, som kan forårsage solskoldning og
+hudforandringer. Gruppen \chemfig{C_xH_y} er en alkylgruppe.
+
+\begin{equation}
+\chemname{\chemfig{NH_2-[2]**6(---(-(=[::60]O)-[:30]O-[:-30]C_xH_y)---)}}{Stof A}
+\end{equation}
+
+a. Karakteriser de funktionelle grupper i molekylet. Gør rede for, at stof A er en base.
+   
+   Vi har en \chemfig{NH_2} gruppe hvilket er en primær amin  
+   Vi har en aromatisk ring hvilket er en Phenyl  
+   Vi har en estergruppe  
+
+   Stoffet er en base fordi den primære amin gruppe kan optage en H$^+$ så den bliver  
+   \chemfig{...-N^+H_3}
+
+b. Gør rede for de karakteristiske absorptionsbånd over 1500 $cm^{-1}$ i IR-spektret.
+   Inddrag bølgetal og intensitet i tilordningen.
+   
+   Bølgetal     | Bemærkning        | Tilordning
+    ---         | ---               | ---
+   3300-3500    | To brede bånd     | N-H(primær amin)
+   2850-3000    | flere toppe       | C-H(C:$sp^3$)
+   1750         | et kraftigt bånd  | C=O(ester)
+   1600         | et kraftigt bånd  | N-H(primær amin)
+
+   Alle disse tilordninger giver mening i forhold til strukturformlen
+
+## Opgave 5
+
+\begin{equation}
+\chemname{\chemfig{H_3C-*6(---(-(=[1]CH_2)-[-1]CH_3)--=)}}{Figur 4: Limonen}
+\end{equation}
+
+\begin{equation}
+\chemname{\chemfig{H_3C-(-[-1]CH_3)=[1]-[0]-[1]-[0](-[2]CH_3)(-[-2]OH)-=[-1]CH_2}}{Figur 5: Linalool}
+\end{equation}
+
+\begin{equation}
+\chemname{\chemfig{H_3C-[1](-[2]CH_3)=[-1]-[1]-[-1]-[1](-[2]CH_3)=[-1]-[1](-[2]H)=[-1]O}}{Figur 6: Citral}
+\end{equation}
+
+a. Se figur 4
+\color{white}
+b. 
+\color{black}
+c. Argumenter for hvilket IR-spektrum, der hører til hvilket stof.
+   
+   Det sidste spektrum hører til stoffet citral(figur 6) da citral er det
+   eneste af de tre stoffer som er en aldehyd og derfor giver toppe ved  
+   1745 - meget kraftig top  
+   2720 Og 2820 - to toppe  
+
+   Det andet spektrum hører til stoffet linalool(figur 5) da linalool er det
+   eneste af de tre stoffer som indeholder en OH gruppe og derfor giver den
+   en relativ bred top ved cirka 3600.
+
+   Så tilhører det første spektrum limonen(figur 4) 
+
+d. Hvor mange stereoisomere former findes der af hvert af de tre stoffer: limonen, linalool og citral?
+   
+   - Limonen
+  
+     Limonen har ikke nogle stereoisomere, den har kun en form
+   
+   - Linalool
+    
+     Linalool har 2 forskellige stereoisomere, da carbon atomet der ligger i midten af gruppen  
+
+     \chemfig{R_1-{\color{red}C}(-[2]CH_3)(-[-2]OH)-[0]R_2}  
+     
+     er asymmetrisk
+
+   - Citral
+     
+     Citral har heller ikke nogle stereoisomere, den har kun den ene form

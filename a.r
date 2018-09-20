@@ -15,17 +15,21 @@ l2 <- mydata$l2
 h2 <- mydata$h2
 l3 <- mydata$l3
 h3 <- mydata$h3
-h2r = kast(mydata$v2, l2)
-h3r = kast(mydata$v3, l3)
 
-mydata$v2
+v2 = mydata$v2/180*pi
+v3 = mydata$v3/180*pi
+
+l = seq(-20, 400, by=0.5)
+
+h2r = kast(v2, l)
+h3r = kast(v3, l)
+
+mydata$v3
 l2
 l3
-h2r
-h3r
 
-plot(l2, h2, ylim = c(-100, 100), xlim = c(-250, 250))
-points(l2, h2r)
+plot(l2, h2, ylim = c(-100, 100), xlim = c(-20, 400), col="#FF0000")
+lines(l, h2r)
 
-plot(l3, h3, ylim = c(-100, 100), xlim = c(-250, 250))
-lines(l3, h3r)
+plot(l3, h3, ylim = c(-100, 100), xlim = c(-20, 400), col="#FF0000")
+lines(l, h3r)
