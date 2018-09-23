@@ -3,6 +3,7 @@ header-includes:
         \usepackage[utf8]{inputenc}
         \usepackage{xcolor}
         \usepackage{fancyhdr}
+        \pagestyle{fancy}
         \lhead{Jeppe Møldrup}
         \chead{Matematik Aflevering 3}
         \rhead{24/9-2018}
