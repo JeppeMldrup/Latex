@@ -100,29 +100,16 @@ a. Bestem $a$ og $b$
    
    Jeg laver potensregression på dataet
    
-    ```{r, echo=FALSE}
-    vin = c(20, 40, 60, 80)
-    kraft = c(0.035, 0.063, 0.085, 0.10)
-
-    fit = nls(y ~ b * x^a, data = list(y = kraft, x = vin), start = list(b = 1, a = 0.5))
-
-    nx = seq(0, 100, length = 100)
-    ny = predict(fit, data.frame(x = nx))
-
-    co = coef(fit)
-
-    plot(vin, kraft, xlab = "Vinkel", ylab = "Kraftpåvirkning")
-    lines(nx, ny)
-
-    ```
+    ![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1-1.png)
    
    $a = 0.726$ og $b = 0.00422$
    \pagebreak
 
 b. Jeg indsætter bare $45^{\circ}$ ind i funktionen
    
-    ```{r, echo=FALSE}
-    predict(fit, data.frame(x = 45))
+    
+    ```
+    ## [1] 0.06709623
     ```
 
    $$f(45^{\circ}) = 0.0671 \ N$$
