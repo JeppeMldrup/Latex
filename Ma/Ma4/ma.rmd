@@ -1,0 +1,66 @@
+---
+Header-includes:
+
+---
+
+# Matematik aflevering 4
+
+## 9.212, 9.218, 9.219, 9.222, 9.225
+
+## 9.212
+
+I et koordinatsystem i rummet er en kugle givet ved ligningen
+$$x^2 - 2x + y^2 + 6y + z^2 + 2z + 2 = 0$$
+Bestem kugles radius og koordinatsættet til dens centrum  
+
+Kugles ligning er
+$$(x-x_0)^2 + (y-y_0)^2 + (z-z_0)^2 = r^2$$
+Så i ligningen har de udregnet alle kvadratsætningerne og trukket alle konstanterne fra de kunne.
+Så jeg skal regne kvadratsætningerne tilbage mens jeg finder konstanterne $x_0$, $y_0$ og $z_0$
+\begin{align*}
+x^2 - 2x + x_0^2 + y^2 + 6y + y_0^2 + z^2 + 2z + z_0^2 + 2 &= x_0^2 + y_0^2 + z_0^2 \\
+(x-1)^2 + (y+3)^2 + (z+1)^2 + 2 &= -1+3+1 \\
+(x-1)^2 + (y+3)^2 + (z+1)^2 &= 1
+\end{align*}
+Cirklens centrum ligger i $\begin{pmatrix} x_0 \\ y_0 \\ z_0 \end{pmatrix}$, så den er
+$\begin{pmatrix} -1 \\ 3 \\ 1 \end{pmatrix}$ og radiussen er $r^2 = 1 \Leftrightarrow r = 1$
+
+## 9.218
+
+a. Bestem en ligning for den plan $\alpha$, der indeholder tagfladen $ABT$.
+   
+   Jeg starter med at finde krydsproduktet mellem $\vec{TA}$ og $\vec{TB}$ da de begge ligger
+   parallelt med planen og derfor er deres krydsprodukt en normalvektor til planen
+   $$\vec{TA} = A(400, 0, 200) - T(0, 0, 520) = \begin{pmatrix} 400 \\ 0 \\ -320 \end{pmatrix}$$
+   $$\vec{TB} = B(280, 280, 200) - T(0, 0, 520) = \begin{pmatrix} 280 \\ 280 \\ -320 \end{pmatrix}$$
+   $$\vec{TA} \times \vec{TB} = \begin{pmatrix} 280 \cdot -320 - (-320) \cdot 0 \\ -320 \cdot 400 - 280 \cdot -320 \\ 280 \cdot -320 - (-320) \cdot 0 \end{pmatrix} = \begin{pmatrix} 89600 \\  38400 \\  112000 \end{pmatrix}$$
+   Nu hvor jeg har et punkter og en normalvektor for planen kan jeg opstille planens ligning
+   $$a(x-x_0)+b(y-y_0)+c(z-z_0)=0$$
+   Med mine værdier bliver det
+   $$89600(x-280)+38400(y-280)+112000(z+200)=0$$
+
+Det oplyses, at tagfladen $BCT$ ligger i planen $\beta$ med ligningen
+$$12x + 28y + 35z = 18200$$
+
+b. Bestem afstanden fra $O(0, 0, 0)$ til planen $\beta$
+   
+   Jeg bruger formlen
+   $$dist(\beta, P) = \frac{|ax_1 + by_1 + cz_1 + d|}{\sqrt{a^2 + b^2 + c^2}}$$
+   For at finde afstanden mellem origo og planen $\beta$  
+   Så jeg indsætter mine værdier
+   $$dist(\beta, O) = \frac{|12 \cdot 0 + 28 \cdot 0 + 35 \cdot 0 - 18200|}{\sqrt{12^2 + 28^2 + 35^2}} = 46.4$$
+   Så afstanden mellem punktet $O(0, 0, 0$ og planen $\beta$ er $46.4$
+
+c. Bestem vinklen mellem tagfladerne $ABT$ og $BCT$
+   
+   For at bestemme vinklen mellem to planer skal jeg bare finde vinklen mellem deres normalvektorer da de
+   bare er forskudt med $90^{\circ}$ i forhold til planen.  
+   Og for at finde vinklen mellem to vektorer bruger jeg formlen
+   $$\cos(v) = \frac{\vec{a} \cdot \vec{b}}{|\vec{a}| \cdot |\vec{b}|}$$
+   Så med mine værdier
+   $$\cos(v) = \frac{89600 \cdot 12 + 38400 \cdot 28 + 112000 \cdot 35}{\sqrt{89600^2 + 38400^2 + 112000^2} \cdot \sqrt{12^2 + 28^2 + 35^2}} \Leftrightarrow v = 28.2^{\circ}$$
+   Så vinklen mellem tagfladerne $ABT$ og $BCT$ er cirka $28.2^{\circ}$
+
+## 9.219
+
+
