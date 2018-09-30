@@ -121,7 +121,7 @@ a. Bestem buens bredde ved jordoverfladen
    finder x-værdien vha. solve.
    $$solve(0=211.4885-10.4801(e^{0.0329x}+e^{-0.0329x}, x)|x>0 \rightarrow x = 91.25$$
 
-    ![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1-1.png)
+    ![Graf for buen](figure/unnamed-chunk-1-1.pdf)
 
    \pagebreak
 
@@ -135,8 +135,8 @@ b. Bestem buens længde
    
    Jeg tager bare og indsætter de to skæringspunkter med x-aksen jeg har fundet i opgave 1 ind i
    formlen for buelængden
-   $$l = \int_{91.25}^{91.25} \sqrt{f'(x)^2+1} \ dx = 1603.1$$
-   Så buen er cirka $1603.1 \ m$ lang
+   $$l = \int_{-91.25}^{91.25} \sqrt{f'(x)^2+1} \ dx = 451.2$$
+   Så buen er cirka $451.2 \ m$ lang
 
 ## 9.225
 
