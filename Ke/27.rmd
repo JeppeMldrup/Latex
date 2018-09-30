@@ -1,0 +1,11 @@
+## Opgave 27
+
+$$p(CO_2)=2.5 \ bar$$
+
+a. Så vi bruger denne konstant til 2.5 bar ved 20 grader
+   $$3.85 \cdot 10^{-2} \ \frac{M}{bar} \cdot 2.5 \ bar = 0.09625 \ M$$
+
+b. For $CO_2$ veds 20 grader og trykket 1.013 bar kan der opløses 940 ml i én liter vand.
+   $$940 \ ml \cdot 1.5=1410 \ ml$$
+
+c. $$3.85 \cdot 10^{-2} \ \frac{M}{bar} \cdot 3.5 \cdot 10^{-4} \ bar=1.3475 \cdot 10^{-5} \ M$$

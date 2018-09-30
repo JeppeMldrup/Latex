@@ -11,8 +11,6 @@ header-includes:
 
 # Matematik aflevering 3
 
-## 1.005, 1.006, 1.049, 1.074, 9.217, 9.234, 9.237
-
 ## 1.005
 
 En cirkel $C$ og en linge $l$ er bestemt ved
@@ -101,7 +99,7 @@ a. Bestem $a$ og $b$
    
    Jeg laver potensregression på dataet
    
-    ![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1-1.png)
+   ![Potensregression](figure/unnamed-chunk-1-1.png)
    
    $a = 0.726$ og $b = 0.00422$
    \pagebreak

@@ -63,4 +63,38 @@ c. Bestem vinklen mellem tagfladerne $ABT$ og $BCT$
 
 ## 9.219
 
+En funktion $f$ er givet ved
+$$f(x) = x^2 -50 \ln(x), \qquad x>0$$
 
+a. Bestem en ligning for tangenten til grafen for $f$ i punktet $p(3,f(3))$
+   
+   Jeg starter med at finde hældningen til tangenten i punktet $p(3, f(3))$ ved at
+   differentiere funktionen og indsætte 3 i funktionen
+   $$f'(x)=(x^2-50\ln(x))' = 2x-\frac{50}{x}, \qquad x>0$$
+   $$f'(3)=2 \cdot 3 - \frac{50}{3}=-10. \overline{6}$$
+   Nu kender jeg hældningen af grafen så jeg bruger formlen
+   $$t(x)=f'(x_0) \cdot (x-x_0) + f(x_0)$$
+   $$t(x)=10.\overline{6} \cdot (x-3) - 45.93=10.\overline{6}x-32-45.93$$
+   Så funktionen for tangenten til punktet $p(3, f(3))$ er $t(x)=10.\overline{6}x-77.93$
+
+b. Bestem monotoniforholdene for $f$
+   
+   For at finde monotoniforholdene for $f$ finder jeg alle mulige ekstremaer, dvs. alle steder hvor
+   $$f'(x)=0$$
+   $$solve(2x-\frac{50}{x}=0, x) \rightarrow x=5$$
+   Så kigger jeg så på området før og efter punktet for at finde om punktet er et maksimum, minimum
+   eller en vandret vendetangent
+   $$2\cdot 2-\frac{50}{2}=-21$$ 
+   $$2\cdot 10-\frac{50}{10}=15$$
+   Så området før punktet er aftagende og området efter er voksende, så det er et maksimum vi har med at gøre.
+   Nu kan monotonilinjen tegnes
+
+   $x$ | 2 | 5 | 10
+   --- | --- | --- | ---
+   $f'(x)$ | -21 | 0 | 15
+   $f(x)$ | $\searrow$ | minimum | $\nearrow$
+
+Det oplyses, at der netop er én værdi af $x_0$, således at linjen med ligningen $y=f'(x_0) \cdot x$
+er en tangent til grafen for $f$
+
+c. 
