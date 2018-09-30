@@ -117,17 +117,7 @@ a. Bestem buens bredde ved jordoverfladen
    finder x-værdien vha. solve.
    $$solve(0=211.4885-10.4801(e^{0.0329x}+e^{-0.0329x}, x)|x>0 \rightarrow x = 91.25$$
 
-    ```{r, echo=FALSE}
-    func = function(x){211.4885-10.4801*(exp(0.0329*x)+exp(-0.0329*x))}
-
-    solve = uniroot(func, interval = c(0, 10000))
-
-    curve(func, from = -100, to = 100, ylab = "f(x)")
-    grid()
-    abline(h = 0)
-    abline(v = 0)
-    points(c(-solve$root, solve$root), c(0, 0))
-    ```
+    ![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1-1.png)
 
    \pagebreak
 
