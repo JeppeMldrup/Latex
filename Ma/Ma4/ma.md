@@ -1,6 +1,10 @@
 ---
-Header-includes:
-
+header-includes:
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \lhead{Jeppe Møldrup}
+    \chead{Matematik aflevering 4}
+    \rhead{1/10-2018}
 ---
 
 # Matematik aflevering 4
