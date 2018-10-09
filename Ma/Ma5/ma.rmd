@@ -1,0 +1,35 @@
+---
+header-includes:
+        \usepackage{fancyhdr}
+        \pagestyle{fancy}
+        \lhead{Jeppe Møldrup}
+        \chead{Matematik aflevering 5}
+        \rhead{12/10-2018}
+---
+
+# Matematik aflevering 5
+
+## 9.206
+
+To funktioner $g$ og $h$ er givet ved
+$$g(x) = 4(1-e^{-x}) \ og \ h(x)=e^x-1$$
+
+a. Tegn graferne for $g$ og $h$ i samme koordinatsystem, og bestem førstekoordinaten
+   til hvert af skæringspunkterne mellem de to grafer.
+   
+    ```{r, echo=FALSE, dev='pdf'}
+
+    x = seq(-1, 2, length=200)
+    y1 = sapply(x, FUN=function(x){4*(1-exp(-x))})
+    y2 = sapply(x, FUN=function(x){exp(x)-1})
+
+    plot(x, y1, type='l')
+    lines(x, y2)
+
+    ```
+
+## 9.207
+
+## 9.208
+
+##9.209
