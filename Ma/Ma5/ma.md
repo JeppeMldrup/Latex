@@ -18,9 +18,124 @@ a. Tegn graferne for $g$ og $h$ i samme koordinatsystem, og bestem førstekoordi
    til hvert af skæringspunkterne mellem de to grafer.
    
     ![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1-1.pdf)
+   
+   \pagebreak
+
+   For at finde de to skæringspunkter skal jeg finde de steder på graferne hvor både x og y er ens, dette gør jeg vha. solve
+   \begin{align*}
+   solve(y = 4(1-e^{-x}) \ and \ y = e^x-1, x, y) \rightarrow &x = 0, y = 0 \\ &x = 1.38629, y = 3
+   \end{align*}
+
+Graferne for $g$ og $h$ afgrænser en punktmængde $M$, der har et areal
+
+b. Bestem arealet af $M$.
+   
+   Jeg bruger formlen
+   $$V = \left| \int_a^b (f(x)-g(x)) \ dx\right|$$
+   Så jeg indsætter mine værdier
+   $$V = \left| \int_{0}^{1.38629} (4(1-e^{-x}) - (e^x-1)) \ dx\right| = 0.931472$$
+   Så arealet af punktmængden $M$ er cirka $0.93$
+
+c. Bestem $g'(x)$, og gør rede for, at $g$ er voksende
+   
+   $$g'(x) = (4(1-e^{-x}))' = 4e^{-x}$$
+   $g$ er voksende fordi dens afledte funktion altid er positiv lige meget hvilken x værdi du giver den
 
 ## 9.207
 
+En kugle i et koordinatsystem i rummet har centrum i $C(0,0,5)$, og punktet $P(2, -1, 3)$ ligger på kuglen
+
+a. Bestem en ligning for kuglen, og bestem en ligning for kugles tangentplan i $P$.
+   
+   Jeg indsætter værdierne i skabelonen
+   $$(x-a)^2 + (y-b)^2 + (z-c)^2 = r^2 \Leftrightarrow (x-2)^2 + (y+1)^2 + (z-3)^2 = r^2$$
+   For at finde kuglens radius finder jeg længden af vektoren mellem centrum og punktet på kuglen med formlen
+   $$|\vec{a}| = \sqrt{a^2 + b^2 + c^2}$$
+   $$\vec{r} = \begin{pmatrix} 0-2 \\ 0+1 \\ 5-3 \end{pmatrix} = \begin{pmatrix} -2 \\ 1 \\ 2 \end{pmatrix}$$
+   $$|\vec{r}| = \sqrt{(-2)^2 + 1^2 + 2^2} = 3$$
+   Så kuglens ligning er
+   $$(x-2)^2 + (y+1)^2 + (z-3)^2 = 9$$
+   
+   For at finde ligningen for tangentplanen i $P$ bruger jeg $\vec{r}$ som min normalvektor og punktet $P$ som mit punkt
+   og indsætter det i skabelonen
+   \begin{align*}
+   &a(x-x_0)+b(y-y_0)+c(z-z_0)=0
+   &-2(x-2)+(y+1)+2(z-3)=0
+   \end{align*}
+
+En anden tangentplan til kuglen er givet ved ligningen
+$$\alpha: \qquad 3x + 6y - 6z + 3 = 0$$
+
+b. Bestem koordinatsættet til røringspunktet $Q$ mellem kuglen og $\alpha$
+   
+   Jeg ved at planen er tangent på kuglen, dvs. at en normalvektor fra kuglens centrum ud til planen vil ligge
+   på punktet $Q$. Så jeg projicere kuglens centrum på planen ved først at finde parameterfremstillingen for
+   linjen der går gennem centrummet og har planens normalvektor som retningsvektor
+   $$\begin{pmatrix} x \\ y \\ z \end{pmatrix} = \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix} + t \cdot \begin{pmatrix} 3 \\ 6 \\ -6 \end{pmatrix}$$
+   Nu kan jeg opskive funktionerne for de tre koordinater
+   \begin{align*}
+   &x = 2 + 3t \\
+   &y = -1 + 6t \\
+   &z = 3 - 6t
+   \end{align*}
+   Nu kan jeg finde skæringspunktet mellem linjen og planen ved at indsætte de tre funktioner for koordinaterne og finde værdien af $t$
+   $$3(2+3t) + 6(-1+6t) - 6(3-6t) + 3 = 0$$
+   Jeg finder værdien af $t$ vha. solve
+   $$solve(3(2+3t) + 6(-1+6t) - 6(3-6t) + 3 = 0, t) \rightarrow t = 0.18519$$
+   Så indsætter jeg det i linjens parameterfremstilling og finder punktet
+   $$Q = \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix} + 0.18519 \cdot \begin{pmatrix} 3 \\ 6 \\ -6 \end{pmatrix} = \begin{pmatrix} 2.55557 \\ 0.11114 \\ 1.88886 \end{pmatrix}$$
+   Så røringspunktet mellem planen $\alpha$ og kuglen er cirka $\begin{pmatrix} 2.6 \\ 0.1 \\ 1.8 \end{pmatrix}$
+
 ## 9.208
 
-##9.209
+I en model for udviklingen af en bestem type kræftsvulst er antallet af kræftceller en
+funktion af tiden, der opfylder differentialligningen
+$$\frac{dN}{dt} = 0.82 \cdot 0.88^t \cdot N$$
+Hvor $N$ er antallet af kræftcetter (målt i mio.) til tidspunktet $t$ (målt i døgn).  
+Det oplyses, at $N(10) = 266$.
+
+a. Bestem væksthastigheden til tidspunktet $t = 10$
+   
+   Jeg indsætter $N$ og $t$ ind i differentialligningen
+   $$\frac{dN}{dt} = 0.82 \cdot 0.88^{10} \cdot 266 = 60.75$$
+   Så efter 10 døgn kommer der $60.75$ millioner flere kraftceller til hver dag
+
+b. Bestem en forskrift for $N(t)$
+   
+   Jeg starter med at løse differentialligningen vha. seperation af de variable
+   $$\frac{1}{N} \frac{dN}{dt} = 0.82 \cdot 0.88^t \Leftrightarrow \int \frac{1}{N} \ dN = \int 0.82 \cdot 0.88^t \ dt$$
+   $$\ln(N) = -6.4146 \cdot 0.88^t + k$$
+   Jeg isolerer så $N$
+   $$N(t) = e^{-6.4146 \cdot 0.88^t + k}$$
+   Jeg ved at $N(10) = 266$ så jeg kan indsætte dette ind i funktionen og finde værdien af $k$ vha. solve
+   $$solve(266 = e^{-6.4146 \cdot 0.88^{10} + k}, k) \rightarrow k = 7.36997$$
+   Så forskriften for $N(t)$ er $N(t) = e^{-6.4146 \cdot 0.88^t + 7.36997}$
+
+## 9.209
+
+a. Opstil et udtryk, der beskriver symønsterets omkreds udtrykt ved $x$ og $y$
+   
+   Omkredsen ville have værdien af $y$ to gange til siderne, $2x$ en gang til bunden, og halvdelen af omkredsen af
+   en cirkel med radius $x$. Så funktionen for omkredsen er
+   $$O = 2y + 2x + 2x\pi $$
+
+b. Bestem symønstrets areal som funktion af $x$, når omkredsen er 100 cm.
+   
+   Jeg indsætter 100 ind på $O$'s plads og isolerer y
+   $$100 = 2y + 2x + 2x\pi \Leftrightarrow y(x) = 50-x-x\pi $$
+
+c. Bestem $x$, således at symønsterets areal bliver størst muligt, når omkredsen er 100 cm.
+   
+   Jeg starter med at opskrive en ligning for arealet af mønstret
+   $$V = 2x \cdot y - \frac{\pi}{2}x^2$$
+   Nu indsætter jeg højre side fra funktionen fra opgave b ind på $y$'s plads
+   $$V = 2x \cdot (50-x-x\pi) - \frac{\pi}{2}x^2 \Leftrightarrow V = 100x-2x^2-2x^2\pi-\frac{pi}{2}x^2$$
+   Nu finder jeg monotoniforholdende for $V$ ved at finde samtlige mulige ekstremaer, dvs. der hvor $V'(x) = 0$
+   $$V' = 100-4x-5\pi x$$
+   Jeg finder hvor $V'(x) = 0$ vha. solve
+   $$solve(0 = 100-4x-5\pi x, x) \rightarrow x = 5.0741$$
+   Nu kigger jeg på området før og efter denne x-værdi for at se om det er et maksimum, minimum eller vandret vendetangent
+   $$V'(10) = 100-4 \cdot 10 - 5 \pi \cdot 10 = -97.08$$
+   $$V'(2) = 100-4 \cdot 2 - 5 \pi \cdot 2 = 60.58$$
+   Så da området før er voksende og området efter er aftagende ved jeg at det er et maksimum i punktet $x = 5.0741$ dvs.
+   det punkt hvor $V$ er højest.
