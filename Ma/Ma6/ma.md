@@ -1,5 +1,11 @@
 ---
-
+header-includes:
+        \usepackage[utf8]{inputenc}
+        \usepackage{fancyhdr}
+        \pagestyle{fancy}
+        \lhead{Jeppe Møldrup}
+        \chead{Matematik aflevering 6}
+        \rhead{29/10-2018}
 ---
 
 # Matematik Aflevering 6
