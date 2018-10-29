@@ -1,0 +1,30 @@
+\documentclass[12pt]{standalone}
+
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+        \draw[thick, ->] (-6, 0) -- (6, 0) node[anchor = west]{$x$};
+        \draw[thick, ->] (0, -6) -- (0, 6) node[anchor = south]{$f(x)$};
+        \node[circle, fill = black, inner sep = 2pt] at (-1, 5){};
+        \node[anchor = south east] at (-1, 5){$(-1, 10)$};
+        \node[circle, fill = black, inner sep = 2pt] at (2, -4.5){};
+        \node[anchor = south west] at (2, -4.5){$(2, -9)$};
+
+        \draw[thick] (-0.2, -4.5) -- (0.2, -4.5) node[anchor = west]{$-9$};
+        \draw[thick] (-0.2, 5) -- (0.2, 5) node[anchor = west]{$10$};
+        \draw[thick] (-1, -0.2) -- (-1, 0.2) node[anchor = south]{$-1$};
+        \draw[thick] (2, -0.2) -- (2, 0.2) node[anchor = south]{$2$}; 
+        \draw[thick] (-0.2, 0.5) -- (0.2, 0.5) node[anchor = west]{$1$};
+        \draw[thick] (-3, -0.2) -- (-3, 0.2) node[anchor = south]{$-3$};
+        \draw[thick] (4, -0.2) -- (4, 0.2) node[anchor = south]{$4$};
+
+        \draw (-3, 0) to[out=90, in=180] (-1, 5);
+        \draw (-1, 5) to[out=0, in=180, distance=75] (2, -4.5);
+        \draw (2, -4.5) to[out=0, in=270] (4, 0);
+
+\end{tikzpicture}
+
+\end{document}
