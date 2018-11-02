@@ -1,0 +1,67 @@
+---
+header-includes:
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \lhead{Jeppe Møldrup}
+    \chead{Matematik 7}
+    \rhead{5/11-2018}
+---
+
+# Matematik aflevering 7
+
+## 9.328
+
+Grafen for en linæer funktion $f$ går igennem de to punkter (-3,1) og (5,17).
+
+Bestem en forskrift for $f$.
+
+Jeg bruger formlen
+$$a=\frac{y_2-y_1}{x_2-x_1}$$
+Jeg indsætter mine værdier
+$$a=\frac{17-1}{5-(-3)}=\frac{16}{8}=2$$
+Nu isolerer jeg bare b i formlen for linæer vækst
+$$y=ax+b \Leftrightarrow b=y-ax$$
+Jeg indsætter min værdi for $a$ samt et af punkterne
+$$b=1-2 \cdot -3=1-(-6)=7$$
+Så forskriften for funktionen er
+$$f(x)=2x+7$$
+
+## 9.329
+
+To vektorer $\vec{a}$ og $\vec{b}$ er givet ved
+$$\vec{a}=\begin{pmatrix} 5 \\ 2 \end{pmatrix} \ \text{og} \ \vec{b}=\begin{pmatrix} 1 \\ -4 \end{pmatrix}$$
+Bestem arealet af parallelogrammet udspændt af $\vec{a}$ og $\vec{b}$
+
+Jeg udregner den numeriske værdi af determinantem mellem de to vektorer da det er arealet af parallelogrammet med formlen
+$$|det(\vec{a}, \vec{b})| = |a_x \cdot b_y - a_y \cdot b_x$$
+jeg indsætter mine værdier
+$$|5 \cdot (-4) - 2 \cdot 1| = |-20 - 2| = 22$$
+Så arealet af parallelogrammet udspændt af de to vektorer er 22
+
+## 9.330
+
+På figuren ses en parabel, der er graf for et andengradspolynomium givet ved
+$$f(x)=ax^2+bx+c$$
+Gør reder for, at tallende $a$, $b$ og $c$ er positive, samt at andengradspolynomiets diskriminant er negativ.
+
+$a$ er positiv da grafen "smiler", dvs. den har et globalt minimum og ikke et globalt maximum. $b$ er positiv
+da den er forskudt mod venstre og $c$ er positiv da den er forskudt opad.
+
+Deskriminanten er positiv da grafen ikke rører x-aksen på noget tidspunkt.
+
+## 2.331
+
+En funktion $f$ er givet ved
+$$f(x)=4-3x^2$$
+Bestem en forskrift for den stamfunktion til $f$, hvis graf går gennem punktet $P(2,5)$
+
+Jeg starter med at integrere funktionen $f$
+$$F=\int 4-3x^2 \ dx \Leftrightarrow F = 4x-x^3+k$$
+Jeg ved at $F(5)=2$, dvs.
+$$5=4 \cdot 2 - 2^3 + k \Leftrightarrow 5 = k$$
+Så forskriften for $F$ er 
+$$F(x)=4x-x^3+5$$
+
+## 9.332
+
+
