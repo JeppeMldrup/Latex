@@ -1,0 +1,46 @@
+---
+header-includes:
+        \usepackage{fancyhdr}
+        \usepackage{mhchem}
+        \pagestyle{fancy}
+        \lhead{Jeppe Møldrup}
+        \chead{Fysik aflevering 6}
+        \rhead{12/11-2018}
+output:
+        pdf_document
+---
+
+# Fysik aflevering 6
+
+## Opgave 1
+
+Billedet viser en maskine, som anvendes til at lægge betonfliser i et fortov. Maskinen
+løfter fliserne med en stor sugekop
+
+a. Tildel passende værdier til relevante fysiske størrelser, og vurdér, hvor stor masse
+   flisen kan have, hvis sugekoppen skal kunne løfte den.  
+   Gør herunder rede for relevante antagelser
+   
+   Jeg antager at sugekoppen kan suge med en kraft på 500 N. Da det gælder at
+   $$F = ma$$
+   kan jeg divedere accelerationen fra og finde massen af flisen som sugekoppen kan holde
+   $$\frac{500 \ N}{9.82 \ \frac{m}{s^2}} = 50.92 \ kg$$
+   Så sugekoppen kan løfte fliser med en masse op til 50.9 kg
+
+## Opgave 2
+
+En sky af \ce{^{85}Rb}-atomer beskydes med fotoner fra lasere. Fotonerne bremser rubidiumatomerne i deres
+bevægelse. Inden kølingen has hvert rubidiumatom en bevægelsesmængde med størrelsen $2.01 \cdot 10^{-25}$ kg$\cdot$m/s
+
+a. Bestem rubidiumatomernes fart inden kølingen
+   
+   Jeg finder \ce{^{85}Rb}-atomets masse, som er 84.911792 U. Omregnet til kg er det 1.40999444$\cdot 10^{-25}$ kg
+   Så tager jeg bare rubidiumatomets bevægelsesmængden med dens masse da bevægelsesmængden har enheden kg$\cdot$m/s
+   $$\frac{2.01 \cdot 10^{-25} \ kg \cdot m/s}{1.40999444 \cdot 10^{-25} \ kg} = 1.426 \ m/s$$
+   Så rubidiumatomernes fart inden kølingen er 1.426 m/s
+
+Fotonerne fra laserne har bølgelængden 780 nm og absorberes af rubidiumatomerne
+
+b. Vurdér, hvor mange fotoner der skal ramme et rubidiumatom for, at det bremses helt op
+   
+   
