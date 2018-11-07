@@ -50,9 +50,9 @@ b. Bestem monotoniforholdene for $f$
    monotonilinjen tegnes
    \begin{center}
    \begin{tabular}{c | c c c c c}
-   x & 0 & 0.46482 & 2 & 2.8685 & 3 \\ \hline
-   f'(x) & + & 0 & - & 0 & + \\
-   f(x) & $\nearrow$ & lok. max. & $\searrow$ & lok. min. & $\nearrow$ \\
+   $x$ & 0 & 0.46482 & 2 & 2.8685 & 3 \\ \hline
+   $f'(x)$ & + & 0 & - & 0 & + \\
+   $f(x)$ & $\nearrow$ & lok. max. & $\searrow$ & lok. min. & $\nearrow$ \\
    \end{tabular}
    \end{center}
 
@@ -60,3 +60,9 @@ Linjen $l$ med ligningen $y = x-9$ er tangent til grafen for $f$ i punktet $P(3,
 En anden linje $m$ er parallel med linjen $l$ og tangerer grafen for $f$ i punktet $Q$.
 
 c. Bestem førstekoordinaten til punktet $Q$
+   
+   Jeg ved at linjen $l$'s hældning er 1, dvs. at linjen $m$ skal have samme hældning. For at kunne tangere grafen for $f$ skal det være i et punkte med
+   samme hældning. Så jeg finder alle punkter hvor hældningen er 1, dvs. der hvor $f'(x)=1$
+   $$solve(f'(x)=1,x) \rightarrow x=\frac{1}{3} \vee x=3$$
+   linjen $l$ tangerer i punktet med x-værdien $x = 3$ og det eneste andet punkt hvor hældningen er 1 er punktet med x-værdien $x=\frac{1}{3}$
+   så det må være punktet $Q$'s førstekoordinat.
