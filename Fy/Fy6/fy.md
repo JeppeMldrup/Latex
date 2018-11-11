@@ -22,11 +22,14 @@ a. Tildel passende værdier til relevante fysiske størrelser, og vurdér, hvor 
    flisen kan have, hvis sugekoppen skal kunne løfte den.  
    Gør herunder rede for relevante antagelser
    
-   Jeg antager at sugekoppen kan suge med en kraft på 500 N. Da det gælder at
+   Jeg antager at sugekoppen har et areal på $\pi$ og har et tryk på $160 \ Pa$. Jeg bruger
+   formlen
+   $$Pa = \frac{F}{a} \Leftrightarrow F = Pa \cdot a \Leftrightarrow F = 160 \cdot \pi = 502.65 \ N$$
+   Da det gælder at
    $$F = ma$$
    kan jeg divedere accelerationen fra og finde massen af flisen som sugekoppen kan holde
-   $$\frac{500 \ N}{9.82 \ \frac{m}{s^2}} = 50.92 \ kg$$
-   Så sugekoppen kan løfte fliser med en masse op til 50.9 kg
+   $$\frac{502.65 \ N}{9.82 \ \frac{m}{s^2}} = 51.19 \ kg$$
+   Så sugekoppen kan løfte fliser med en masse op til 50.2 kg
 
 ## Opgave 2
 
@@ -81,6 +84,17 @@ En person, der ligger vandret, bæres af en opadgående luftstrøm
 
 a. Tildel passende værdier til relevante fysiske størrelser og brug disse til at vurdere luftstrømmens fart.
    Gør herunder rede for relevante antagelser
+   
+   Jeg antager at personen vejer 60 kg, har et frontareal på 1 og en luftmodstandskoefficient
+   på 0.2 og at luft ved 20 grader har densiteten $1.205$ kg/m$^3$.  
+   Jeg ved at hvis han skal stå stille i luften skal den resulterende kraft være 0, dvs.
+   at kraften fra luftmodstanden skal være lig hans tyngdekraft som er
+   $$F_{tyngde} = 60 \ kg \cdot 9.82 \ \frac{m}{s^2} = 589.2 \ N$$
+   Så jeg bruger formlen for luftmodstand
+   $$F = -\frac{1}{2} \rho v^2 A C_d$$
+   Jeg indsætter mine værdier og isolerer $v$
+   $$-589.2 \ N = -\frac{1}{2} 1.205 \ kg/m^3 \cdot v^2 \cdot 1 \ m^2 \cdot 0.2 \rightarrow v = 69.926 \ m/s^2$$
+   Så hastigheden af luftstrømmen er cirka 70 m/s$^2$
 
 ## Opgave 5
 
@@ -100,4 +114,27 @@ i løbet af 90 m
 
 b. Bestem størrelsen af bådens gennemsnitlige acceleration i de første 90 m af løbet
    
+   Jeg benytter formlen
+   $$v^2-v_0^2 = 2 \cdot a \cdot (s-s_0)$$
+   Jeg indsætter mine værdier og udregner $a$
+   $$19.9 \ km/h = 5.527778 \ m/s$$
+   $$(5.5287778 \ m/s)^2-(0 \ m/s)^2 = 2 \cdot a \cdot (90 \ m-0 \ m) \Leftrightarrow a = 0.170 \ \frac{m}{s^2}$$
+   Så accelerationen er 0.170 $\frac{m}{s^2}$
+
+En roer træner i en romaskine med elektronisk kraftmåler. Grafen viser
+størrelsen af roerens kraft på romaskinens håndtag i løbet af et tag.
+Grafens 1.-akse angiver hændernes vandrette position, og 2.-aksen angiver
+størrelsen af roerens vandretter kraft på håndtaget. Roeren tager 32 tag pr.
+minut.
+
+c. Med hvilken gennemsnitlig effekt udfører roeren arbejde på romaskinens håndtag?  
+   Bilag 2 kan benyttes ved besvarelsen
    
+   Jeg finder arealet under grafen da det vil have enheden Nm som er det samme som J, jeg
+   har ikke forskriften for funktionen til grafen, så jeg tæller tern. Hvert tern er 
+   $0.1 \ m \cdot 100 \ N = 10\ J$. Jeg har vurderet antallet af tern til 65. Dvs. at
+   roeren udfører 650 J for hvor tag. Der bliver lavet 32 tag pr minut, så jeg ganger
+   energien med de 32 tag.
+   $$650 \ J/tag \cdot 32 \ tag/minut = 20.3125 \ J/minut$$
+   Jeg dividerer dette med 60 da jeg vil finde roerens effekt
+   $$\frac{20.3125 \ J/minut}{60 \ s/min} = 0.34 \ W$$ 
