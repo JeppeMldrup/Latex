@@ -138,9 +138,9 @@ omega = {2 cdot pi} over {1 over 477} = 2997.1
 .EN
 Så indsætter jeg bare mine værdier ind i formlen for kraften
 .EQ
-F = m cdot omega sup 2 cdot r = 349 ~ roman u cdot 2997.1 sup 2 cdot 0.053 ~ roman m = 9.2055246 cdot 10 sup -23 ~ roman N
+F = m cdot omega sup 2 cdot r = 349 ~ roman u cdot 2997.1 sup 2 cdot 0.053 ~ roman m = 2.7590073 cdot 10 sup -19 ~ roman N
 .EN
-Så centripetalkraften for $roman UF sub 6$-molekylet der ligger 5.3 cm fra omdrejningsaksen er cirka $9.2 cdot 10 sup -23$ N
+Så centripetalkraften for $roman UF sub 6$-molekylet der ligger 5.3 cm fra omdrejningsaksen er cirka $2.8 cdot 10 sup -15$ N
 
 .SH
 Opgave 4
@@ -216,13 +216,13 @@ Bestem ved hjælp af tabellens data rakettens kinetiske energi 13.5 s efter affy
 
 Jeg benytter formlen
 .EQ
-E sub kin = mv sup 2
+E sub kin = 1 over 2 mv sup 2
 .EN
 Jeg indsætter mine værdier
 .EQ
-E sub kin = 144.6 ~ roman kg cdot 331 ~ roman m/s = 47862.6 ~ roman J
+E sub kin = {144.6 ~ roman kg} over 2 cdot (331 ~ roman m/s) sup 2 = 7.92 cdot 10 sup 6 ~ roman J
 .EN
-Så rakettens kinetiske energi ved 13.5 sekunder efter affyring er cirka $47.9 cdot 10 sup 3 ~ roman J$
+Så rakettens kinetiske energi ved 13.5 sekunder efter affyring er cirka $7.9 ~ roman GJ$
 
 .IP b.
 Vurdér ved hjælp af tabellens data, hvor langt raketten nåede op
