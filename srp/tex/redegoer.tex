@@ -1,0 +1,25 @@
+\section{Redegørelse af et ANN netværk}
+
+\subsection{ANN's baggrund}
+Et ANN(Artificial Neural Network) er en form for kunstig intellegens, hvor man prøver at efterligne den menneskelige hjerne
+ved at lave simple versioner af det netværk af de mange milliarder neuroner der findes i den menneskelige hjerne.
+Ligesom hvor en biologisk menneskehjerne har neuroner og synapser med forskellige styrker, så har et ANN også det, dog lidt simplere
+så man kan tillægge værdier til de forskellige neuroner og synapser.
+
+\subsection{Strukturen bag et ANN}
+I den menneskellige hjerne er der som sagt milliarder af forskellige neuroner \footcite{DDOhjerne}.
+I et ANN laver man ikke ligeså mange
+neuroner som i en rigtig hjerne, da det er umuligt med den teknologi vi har i dag, men det er stadigvæk i fokus at lave et netværk med så mange neuroner
+som muligt. Derfor er det vigtigt at disse neuroner er matematisk set meget simple, så det er nemt for en moderne computer bare at blæse gennem matematikken
+i et ANN. Så strkukteren bag én neuron i et givet ANN er
+
+\input{diagrammer/neuron.tex}
+
+Hvor alle $x_n$ er outputs fra andre neuroner der er tilsluttet denne neuron via synapser, $w_{nj}$ er såkaldte vægte der angiver hvor
+forstærket signalet er fra outputtet af sidste neuron og bias er en værdi der der enten vil øge eller
+sænke outputtet af en given neuron. Det der så sker inde i neuronen er to ting. \\
+Først bliver alle inputs ganget sammen med deres vægte og summeret op. \\
+Derefter bliver der ført en såkaldt "Activation function" der typisk bare normaliserer
+summationen mellem f.eks 0 og 1\footcite{ANN11}. Her betragter jeg bare logistisk vækst med et maksimum på 1 som min activation function.
+Funktionen vil så tage et vilkårligt tal og så spytte et andet tal ud der ligger mellem 0 og 1
+\includegraphics[width=\textwidth]{diagrammer/sigmoid.pdf}
