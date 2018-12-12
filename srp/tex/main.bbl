@@ -19,6 +19,40 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{3b1b3}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=682352d7b7d88f46edac62cd97b58db1}{%
+           family={3Blue1Brown},
+           familyi={3\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Youtube}%
+      }
+      \strng{namehash}{682352d7b7d88f46edac62cd97b58db1}
+      \strng{fullhash}{682352d7b7d88f46edac62cd97b58db1}
+      \strng{bibnamehash}{682352d7b7d88f46edac62cd97b58db1}
+      \strng{authorbibnamehash}{682352d7b7d88f46edac62cd97b58db1}
+      \strng{authornamehash}{682352d7b7d88f46edac62cd97b58db1}
+      \strng{authorfullhash}{682352d7b7d88f46edac62cd97b58db1}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is backpropagation really doing? | Deep learning, chapter 3}
+      \field{urlday}{12}
+      \field{urlmonth}{12}
+      \field{urlyear}{2018}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.youtube.com/watch?v=Ilg3gGewQ5U
+      \endverb
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=Ilg3gGewQ5U
+      \endverb
+    \endentry
     \entry{ANN11}{book}{}
       \name{author}{3}{}{%
         {{uniquename=0,uniquepart=base,hash=076eb57a2d45a4b3bc1362cdf40e1763}{%
@@ -81,6 +115,40 @@
       \endverb
       \verb{url}
       \verb http://denstoredanske.dk/Krop,_psyke_og_sundhed/Sundhedsvidenskab/Sammenlignende_anatomi_og_fysiologi/hjerne
+      \endverb
+    \endentry
+    \entry{wikigradient}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wikipedia}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Gradient}
+      \field{urlday}{12}
+      \field{urlmonth}{12}
+      \field{urlyear}{2018}
+      \field{year}{2013}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://da.wikipedia.org/wiki/Gradient
+      \endverb
+      \verb{url}
+      \verb https://da.wikipedia.org/wiki/Gradient
       \endverb
     \endentry
   \enddatalist

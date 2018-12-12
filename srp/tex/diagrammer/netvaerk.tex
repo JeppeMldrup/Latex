@@ -5,7 +5,7 @@
         \foreach \x in {1, 2, 3}
         {
                 \draw[very thick] (0, -1.5*\x) circle (0.5);
-                \node at (0, -1.5*\x) {\x};
+                \node at (0, -1.5*\x) {$I_{\x}$};
                 \foreach \y in {1, 2, 3, 4}
                 {
                         \draw[very thick] (0.5, -1.5*\x) -- (2, -1.5*\y+0.75);
@@ -15,7 +15,7 @@
         \foreach \y in {1, 2, 3, 4}
         {
                 \draw[very thick] (2.5, -1.5*\y+0.75) circle (0.5);
-                \node at (2.5, -1.5*\y+0.75){\y};
+                \node at (2.5, -1.5*\y+0.75){$H_\y$};
                 \draw[very thick] (3, -1.5*\y+0.75) -- (4.5, -3);
         }
         \draw[very thick] (5, -3) circle (0.5);

@@ -4,4 +4,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.1}ANN's baggrund}{2}{subsection.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2}Strukturen bag et ANN}{2}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.2}Strukturen bag neuronerne i et ANN}{2}{subsection.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3}Matematikken bag synapser i et ANN og fejlfunktion}{6}{subsection.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.4}Backpropagation og Gradient descent}{7}{subsection.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.5}Udledning af tr\IeC {\ae }ningsformler}{8}{subsection.1.5}
