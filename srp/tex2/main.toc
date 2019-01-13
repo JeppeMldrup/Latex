@@ -1,0 +1,29 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Redeg\IeC {\o }relse af et ANN netv\IeC {\ae }rk}{2}{section.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1}ANN's baggrund}{2}{subsection.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2}Strukturen bag neuronerne i et ANN}{2}{subsection.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3}Matematikken bag synapser i et ANN og fejlfunktion}{6}{subsection.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.4}Backpropagation og Gradient descent}{7}{subsection.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.5}Udledning af tr\IeC {\ae }ningsformler}{8}{subsection.1.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.6}Fordele og ulemper ved et ANN}{10}{subsection.1.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.6.1}Fordele}{10}{subsubsection.1.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.6.2}ulemper}{10}{subsubsection.1.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Fremstilling af robotter i Isaac Asimov: "Robot"}{10}{section.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Rundt i ring}{11}{subsection.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Logik}{12}{subsection.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3}Bevis}{13}{subsection.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4}Konklusion p\IeC {\r a} Isaac Asimov: "Robot"}{13}{subsection.2.4}

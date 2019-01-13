@@ -1,15 +1,15 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'main.blg'
-[23] biber:313> INFO - === Wed Dec 12, 2018, 11:53:10
-[40] Biber.pm:371> INFO - Reading 'main.bcf'
-[98] Biber.pm:857> INFO - Found 4 citekeys in bib section 0
-[109] Biber.pm:3976> INFO - Processing section 0
-[118] Biber.pm:4136> INFO - Looking for bibtex format file 'bib.bib' for section 0
-[118] bibtex.pm:1500> INFO - LaTeX decoding ...
-[123] bibtex.pm:1316> INFO - Found BibTeX data source 'bib.bib'
-[152] UCollate.pm:68> INFO - Overriding locale 'dk_DK' defaults 'variable = shifted' with 'variable = non-ignorable'
-[152] UCollate.pm:68> INFO - Overriding locale 'dk_DK' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[152] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'dk_DK'
-[152] Biber.pm:3810> INFO - No sort tailoring available for locale 'dk_DK'
-[160] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[163] bbl.pm:720> INFO - Output to main.bbl
+[20] biber:313> INFO - === Thu Dec 20, 2018, 19:05:42
+[38] Biber.pm:371> INFO - Reading 'main.bcf'
+[95] Biber.pm:857> INFO - Found 15 citekeys in bib section 0
+[107] Biber.pm:3976> INFO - Processing section 0
+[116] Biber.pm:4136> INFO - Looking for bibtex format file 'bib.bib' for section 0
+[116] bibtex.pm:1500> INFO - LaTeX decoding ...
+[128] bibtex.pm:1316> INFO - Found BibTeX data source 'bib.bib'
+[203] UCollate.pm:68> INFO - Overriding locale 'dk_DK' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[204] UCollate.pm:68> INFO - Overriding locale 'dk_DK' defaults 'variable = shifted' with 'variable = non-ignorable'
+[204] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'dk_DK'
+[204] Biber.pm:3810> INFO - No sort tailoring available for locale 'dk_DK'
+[217] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[224] bbl.pm:720> INFO - Output to main.bbl

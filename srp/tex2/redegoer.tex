@@ -12,7 +12,7 @@ I et ANN laver man ikke ligeså mange
 neuroner som i en rigtig hjerne, da det er umuligt med den teknologi vi har i dag, men det er stadigvæk i fokus at lave et netværk med så mange neuroner
 som muligt.
 Derfor er det vigtigt at disse neuroner er matematisk set meget simple, så det er nemt for en moderne computer bare at blæse gennem matematikken
-i et ANN. Dermed er den strukter man har valgt bag én neuron i et givet ANN vist i figur 1.
+i et ANN. Dermen er den strukter man har valgt bag én neuron i et givet ANN vist i figur 1.
 
 \begin{figure}
 \label{neuron}
@@ -21,12 +21,12 @@ i et ANN. Dermed er den strukter man har valgt bag én neuron i et givet ANN vis
 \end{figure}
 
 Hvor alle $x_n$ er outputs fra andre neuroner der er tilsluttet denne neuron via synapser, $w_{nj}$ er såkaldte vægte der angiver hvor
-forstærket signalet er fra outputtet af sidste neuron og bias er en værdi der enten forstærker eller formindsker neuroner
-Det der så sker inde i neuronen er to ting. \\
-Først bliver alle inputs ganget sammen med deres vægte og summeret op samt biasset bliver lagt til. \\
-Derefter bliver der ført en såkaldt "Activation function" der typisk normaliserer
+forstærket signalet er fra outputtet af sidste neuron og bias er en værdi der der enten vil øge eller
+sænke outputtet af en given neuron. Det der så sker inde i neuronen er to ting. \\
+Først bliver alle inputs ganget sammen med deres vægte og summeret op. \\
+Derefter bliver der ført en såkaldt "Activation function" der typisk bare normaliserer
 summationen mellem f.eks 0 og 1\footcite{ANN11}. Her betragter jeg logistisk vækst med et maksimum på 1 som min activation function, hvor
-funktionen vil så tage et vilkårligt tal og så spytte et andet tal ud der ligger mellem 0 og 1, jeg betegner funktionen med symbolet $\sigma$\\
+funktionen vil så tage et vilkårligt tal og så spytte et andet tal ud der ligger mellem 0 og 1, jeg betegner funktionen med symbolet $sigma$\\
 \includegraphics[width=\textwidth]{diagrammer/sigmoid.pdf}
 
 Et ANN består af en hel masse neuroner fra figur 1 der er sammensat som på figur 2
@@ -41,16 +41,14 @@ Figur 2 er et eksempel på et meget simpelt netværk der er kendt som et Feed Fo
 Her bliver alle neuroner delt op i forskellige lag, i det her eksempel er der 3, men der kunne også være flere. Det første lag
 kaldes for "Input layer", det sidste kaldes for "Output layer" og alle imellem kaldes for "Hidden layers". Så er inputtet
 til hver neuron outputtet fra alle neuroner i sidste lag. Grunden til at alle neuroner i et givent lag så ikke har den samme værdi
-idet deres værdi afhænger af samme neuroner, er fordi de alle sammen har forskellige vægte. Så f.eks. har første neuron fire forskellige vægte,
+idet deres værdi afhænger af samme neuroner, er fordi de alle sammen har forskellige vægte. Så f.eks. har første neuron 4 forskellige vægte,
 én til hver af neuronerne i næste lag\footcite{ANN11}. Allerede i dette meget simple netværk er det ret rodet i forhold til de små tilslutninger mellem neuronerne.
 Så derfor er det smart at have en god systematisk navngivning til de forskellige elementer der opgør et neuralt netværk.\\
 Denne opgave bruger følgende navngivning.\\
-Neuroner(Hvor L er hvilket lag neuronen er i, ikke en eksponent, og i er nummeret på neuronen): $n^L_{i}$ \\
+Neuroner(Hvor L er hvilket lag neuronen er i, ikke en eksponent): $n^L_{i}$ \\
 Vægte har i indekset 2 numre, et nummer for hvilken neuron de er fra, og et nummer for hvilken neuron de skal til, derudover også  en indeks der viser hvilket lag de er fra
-$w_{ij}^{L}$, så det kunne f.eks. være $w_{11}^1$, hvor vægten er fra input laget, og den går fra første neuron i input laget til første neuron af hidden laget.\\
+$w_{ij}^{L}$, så det kunne f.eks. være $w_{11}^1$, hvor vægten er fra input laget, og den går fra første neuron til første neuron af hidden laget.\\
 Biasser har samme navngivning som en neuron bare med et $b$ i stedet.\\
-Derfor kan værdien af en given neuron opskrives som
-$$n^L_{j} = \sigma \left( \sum_{i}^{m_{L-1}} n^{L-1}_i \cdot w^{L-1}_{ij}\right)$$
 Da alle neuroner bliver representeret af et tal, kan et lag skrives som en vektor, hvor hvert koordinat af vektoren er en neuron i laget, f.eks.
 $$\vec{H} = \begin{pmatrix} n^2_1 \\ n^2_2 \\ n^2_3 \\ \cdot \\ \cdot \\ \cdot \\ n^2_n \end{pmatrix}$$
 Her er det hidden lag opskrevet som en vektor.
@@ -107,7 +105,7 @@ Kædereglen siger at
 $$(f(g(x)))' = f'(g(x)) \cdot g'(x) \Leftrightarrow \frac{df}{dx} = \frac{df}{dg}\cdot \frac{dg}{dx}$$
 Jeg benytter kædereglen og finder
 $$\frac{\partial f}{\partial w^{L-1}_{ij}} = \frac{\partial f}{\partial n^L_j} \cdot \frac{\partial n^L_j}{\partial z^L_j} \cdot \frac{\partial z^L_j}{\partial w^{L-1}_{ij}}$$
-Jeg kan så udregne de tre partiel afledte
+Jeg kan så udregne de tre hældninger
 \begin{align*}
         \frac{\partial f}{\partial n^L_j} & = \left( \sum_{j=1}^{a_L}(n^L_j-y_j)^2 \right) ' = 2(n^L_j-y_j)\\
         \frac{\partial n^L_j}{\partial z^L_j} & = (\sigma (z^L_j))' = \sigma (z^L_j) \cdot (1-\sigma (z^L_j) \\
@@ -145,27 +143,3 @@ ANN'er er forfærdelig gode til at finde mønstre og systematik i data der ville
 Den største ulempe ved et ANN er at den kun giver et svar, og man ikke rigtig kan undersøge hvordan netværket fandt frem til svaret\\
 Andre ulemper indeholder at man skal have en relativt stor database af træningssæt for at kunne lave et godt netværk og det kan være
 meget svært at tage noget virkeligt og lave det om til data som netværket kan læse.\footcite{liann}
-
-\section{Eksempel på et Neuralt Netværk}
-
-Matematikken og strukturen jeg har introduceret i sidste afsnit er noget gammelt teknologi som for længst er gået af mode. Et hold af forskere fra firmaet Nvidia
-har brugt en form for et Neuralt Netværk, der hedder et Convolutional Neural Network (CNN), som i stedet for lag der bare består af en vektor af neuroner, er det lag
-med en hel række filtre der hver ekstrahere en eller form for information om et billede. Men ligesom et normalt ANN finder computeren selv ud af hvilke
-filtre den skal bruge til at opnå det bedste resultat muligt.\footcite{cnn}\\
-\\
-Det deres netværk så kan gøre er at den kan tage et billede hvor der er noget der er blevet overmalet med hvid, og så rekonstruere det den mener der er højest chance
-for at kunne være der hvor det hvide er. Resultaterne viser de i en video hvor man kan se hvor effektive sådan nogle neurale netværker er til at finde mønstre. Selvom
-der ikke er noget menneske der ville kunne gøre det samme som dette netværk på samme korte tid med samme effekt. Så er det vigtigt at fastslå at dette netværk stadig er
-helt vildt meget simplere end den menneskelige hjerne. Selvom vi er kommet langt med udviklingen af Neurale Netværk, så er vi stadig ikke i samme boldgade som en ægte hjerne.
-Men trods det er det stadig et meget forbløffende resultat forskerne fra Nvidia er kommet frem til.\footcite{nvid}
-\\
-\\
-\includegraphics[width=\textwidth]{pic/CNN1.png}
-\includegraphics[width=\textwidth]{pic/CNN2.png}
-\\
-De to billeder er screenshots fra linket: \url{https://www.youtube.com/watch?v=gg0F5JjKmhA}, sidst besøgt den 20/12-2018.
-\\
-De filtre CNN'erne bruger er noget der hedder et kernel eller en convolution matrix, indenfor billedredigering. Den måde det virker på er at man har en matrix af en eller anden
-størrelse(3x3, 5x5...) hvor der så er en række tal i. Derefter "scanner" man så hele billedet hvor man ligger matrixen oveni billedet og der hvor midten af matrixen rammer,
-udregner man summen af alle pixels rundt om, ganget med den værdi der er i matrixen hvor pixelen er. Ud fra de forskellige værdier man har i matrixen kan man så få den til at
-finde kanter, finde cirkler, finde områder med samme farve, sløre billedet, gøre det skarpere osv. og det er disse værdier som CNN'erne skal finde.\footcite{krnel}

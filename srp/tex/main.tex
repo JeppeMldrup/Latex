@@ -41,7 +41,10 @@
 \pagebreak
 
 \begin{abstract}
-        abstract
+        This thesis is about the mathematical structure behing an Artificial Neural Network(ANN), it goes in depth into how to
+        feed an ANN with data, and train the network according to the output it gives. Furthermore it delves into some
+        ethical questions that come with ANN's, like how we keep ANN's at bay and not take over the world, who's to blame
+        if a self driving car steered by an ANN makes a mistake and crashes etc.
 \end{abstract}
 
 \end{titlingpage}
@@ -50,8 +53,44 @@
 \tableofcontents
 \pagebreak
 
-\input{redegoer.tex}
+\section{Indledning}
 
-\printbibliography[type=book, title={Referencer \\ Bøger}]
+I denne opgave vil jeg først og fremmest undersøge den underliggende matematiske struktur bag et Artificial Neural Network, så vil jeg udlede
+nogle af de aller vigstigste formler der indgår i et ANN, nemlig de formler der bliver brugt til at træne det. Og til sidst komme med et eksempel
+på et mere moderne neuralt netværk for at sætte i perspektiv hvad disse netværk er i stand til at gøre. Derudover vil jeg undersøge nogle
+og diskuttere nogle etiske spørgsmål der er dukket op sammen med ANN'er, og inddrage vinkler fra Det Etiske Råd, Københavns Universitet og Isaac Asimovs bog
+"Robot".
+
+\input{redegoer.tex}
+\input{analyse.tex}
+
+\section{Konklusion}
+
+For at kunkludere har jeg fundet ud af at strukturen der ligger bag et Artificial Neural Network er en simple version af den menneskelige hjerne
+med masser af neuroner og synapser, og matematikken bag et netværk eller matematikken brugt til at træne et netværk ikke er særlig kompliceret, men
+det bliver brugt rigtig mange gange idet netværket består af så mange neuroner og synapser. Jeg har også kigget på et eksempel på et neuralt netværk
+for at se hvad man egentlig kan bruge det til. Derudover har jeg kigget på den etiske del af kunstig
+intellegens i form af ANN'er. Og det er meget svært at finde et endeligt svar på hvordan man skal arbejde sikkert med et ANN, da der er så mange forskellige
+vinkler man kan antage i den debat. Ud over at begrænse ANN'er indenfor f.eks. Asimovs robotlove, er det også vigtigt at have en form for kodeks, hvis nu
+der skulle gå et eller andet galt med en kunstig intellegens. Det kunne være at en selvkørende bil kørte galt, så kan man finde ud af hvem det er der er
+skyldig i ulykken. Og ydermere kan man komme ind på om ANN'er langt ude i fremtiden der er komplicerede nok til at være bevidste skal have en form for
+rettigheder ligesom mennesker, idet hvis ikke de har det kan de minde lidt om slaver. Så ANN'er er et fantastisk værktøj der kan bruges til automatisering
+af mange ting, men som de udvikler sig mere og mere ind i vores hverdag og bliver klogere, er det vigtig at vi har fået udarbejdet nogle etiske regler
+for hvor man kan arbejde og bruge ANN'er.
+
+\pagebreak
+
+\section{Referencer}
+
+\printbibliography[type=book, title={Bøger}]
 \printbibliography[type=online, title={Artikler og andre online kilder}]
+
+\section{Bilag}
+
+\include{diagrammer/neuron}
+\include{diagrammer/netvaerk}
+\includegraphics[width=\textwidth]{diagrammer/sigmoid.pdf}
+\includegraphics[width=\textwidth]{pic/CNN1.png}
+\includegraphics[width=\textwidth]{pic/CNN2.png}
+
 \end{document}

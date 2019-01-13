@@ -1,6 +1,22 @@
-\BOOKMARK [1][-]{section.1}{Redeg\370relse af et ANN netv\346rk}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{ANN's baggrund}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{Strukturen bag neuronerne i et ANN}{section.1}% 3
-\BOOKMARK [2][-]{subsection.1.3}{Matematikken bag synapser i et ANN og fejlfunktion}{section.1}% 4
-\BOOKMARK [2][-]{subsection.1.4}{Backpropagation og Gradient descent}{section.1}% 5
-\BOOKMARK [2][-]{subsection.1.5}{Udledning af tr\346ningsformler}{section.1}% 6
+\BOOKMARK [1][-]{section.1}{Indledning}{}% 1
+\BOOKMARK [1][-]{section.2}{Redeg\370relse af et ANN netv\346rk}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{ANN's baggrund}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Strukturen bag neuronerne i et ANN}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Matematikken bag synapser i et ANN og fejlfunktion}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Backpropagation og Gradient descent}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.5}{Udledning af tr\346ningsformler}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.6}{Fordele og ulemper ved et ANN}{section.2}% 8
+\BOOKMARK [3][-]{subsubsection.2.6.1}{Fordele}{subsection.2.6}% 9
+\BOOKMARK [3][-]{subsubsection.2.6.2}{ulemper}{subsection.2.6}% 10
+\BOOKMARK [1][-]{section.3}{Eksempel p\345 et Neuralt Netv\346rk}{}% 11
+\BOOKMARK [1][-]{section.4}{Fremstilling af robotter i Isaac Asimov: "Robot"}{}% 12
+\BOOKMARK [2][-]{subsection.4.1}{Rundt i ring}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.2}{Logik}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.3}{Bevis}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.4}{Konklusion p\345 Isaac Asimov: "Robot"}{section.4}% 16
+\BOOKMARK [1][-]{section.5}{Asimovs tre love i forhold til ANN}{}% 17
+\BOOKMARK [2][-]{subsection.5.1}{K\370benhavns Universitet}{section.5}% 18
+\BOOKMARK [2][-]{subsection.5.2}{Robotters rettigheder og fri vilje}{section.5}% 19
+\BOOKMARK [1][-]{section.6}{Konklusion}{}% 20
+\BOOKMARK [1][-]{section.7}{Referencer}{}% 21
+\BOOKMARK [1][-]{section.8}{Bilag}{}% 22

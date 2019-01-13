@@ -1,0 +1,14 @@
+\BOOKMARK [1][-]{section.1}{Redeg\370relse af et ANN netv\346rk}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{ANN's baggrund}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Strukturen bag neuronerne i et ANN}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Matematikken bag synapser i et ANN og fejlfunktion}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Backpropagation og Gradient descent}{section.1}% 5
+\BOOKMARK [2][-]{subsection.1.5}{Udledning af tr\346ningsformler}{section.1}% 6
+\BOOKMARK [2][-]{subsection.1.6}{Fordele og ulemper ved et ANN}{section.1}% 7
+\BOOKMARK [3][-]{subsubsection.1.6.1}{Fordele}{subsection.1.6}% 8
+\BOOKMARK [3][-]{subsubsection.1.6.2}{ulemper}{subsection.1.6}% 9
+\BOOKMARK [1][-]{section.2}{Fremstilling af robotter i Isaac Asimov: "Robot"}{}% 10
+\BOOKMARK [2][-]{subsection.2.1}{Rundt i ring}{section.2}% 11
+\BOOKMARK [2][-]{subsection.2.2}{Logik}{section.2}% 12
+\BOOKMARK [2][-]{subsection.2.3}{Bevis}{section.2}% 13
+\BOOKMARK [2][-]{subsection.2.4}{Konklusion p\345 Isaac Asimov: "Robot"}{section.2}% 14
