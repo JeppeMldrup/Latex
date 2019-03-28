@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+
+\usepackage{mhchem}
+\usepackage{amsmath}
+\usepackage[utf 8]{inputenc}
+\usepackage{fancyhdr}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+
+\pagestyle{fancy}
+\fancyhead[L]{Mads og Jeppe}
+\fancyhead[C]{AT 7}
+\fancyhead[R]{28/03-2019}
+
+\title{AT 7 - Plastik i havene}
+\author{Mads Damgaard og Jeppe Møldrup}
+\date{28/03-2019}
+
+\begin{document}
+
+\begin{titlepage}
+        \maketitle{}
+        \thispagestyle{empty}
+        \clearpage{}
+\end{titlepage}
+
+\section*{Indledning}
+
+Lige siden opfindelsen af plastik tilbage i 1907 har brugen af plastik i forskellige sammenhænge ikke gjort andet end at stige. I nutiden er vi omringet af plastik, de fleste maskiner har dele der er lavet af plastik, meget stof og tøj indeholder plastik osv. Et stort problem med nutidens plastik vanner, er vores mangel på genbrug. En stor del af indpakning er plastik baseret, og bliver brugt som engangsvarer. En stor del af denne plastik ender i skraldespande og bliver genbrugt. Denne genbrug er dog ikke altid komplett, og ender ofte med blot at blive til afbrændings varer. En overraskende stor del af den producerede plastik ender dog ikke i skraldespande eller andre genbrugs former, hvor de har et formål, meget af det ender i naturen. I forlængelse af naturen ender op til 10\% af produceret plastik faktisk i havet, hvor det næsten ikke bliver nedbrudt. Der findes i dag øer, i havene, der er lavet af plastik. Derudover bliver plastik overtid nedbrudt til mikroplastik, som er skadeligt for havene og i forlængelse af dette også mennesker. I denne opgave vil det undersøges hvilke løsninger der bliver forsket i, til at modvirke dette voksende problem, derudover vil det også undersøges hvilken udvikling der kan forventes, hvis ikke udlednings vanerne i forhold til plastik ændres.
+
+\section*{Problemformulering}
+
+Hvilken udvikling vil mængden af plast i havene undergå, hvis ikke vi ændrer vores forureningsvaner, og hvilke løsninger bliver der forsket i til at modvirke plastik problemet?
+
+\subsection*{Underspørgsmål 1}
+
+Gør rede for typerne af plastik
+
+\subsection*{Metode afsnit}
+
+Dette underspørgsmål bærer et større præg af den kvalitative metode, idet at der er tale om en opdeling og undersøgning af de forskellige typer af plastik og deres individuelle egenskaber, som adskiller dem. Denne type arbejde er alt sammen på et redegørende niveau, i det at den brugbare information alt sammen er blevet indsamlet ved hjælp af kvalitativ empiri, fra kilder relateret til emnet.
+
+\subsection*{Delkonklusion}
+
+Der er syv primære slags plastik som har forskellige egenskaber og forskellige udfordringer i forhold til deres nedbrydelse eller genbrugelse.\\
+Polymethyl Methacrylate er en plastik der bliver brugt som et alternativ til glas, og er nemt at polere. Denne plastik nedbrydes ikke via naturlige reaktioner.\\
+Polycarbonate er en meget stærk plastik der ligesom polymethyl methacryate er gennemsigtigt, dog bliver det nemmere ridset. Det er svært at genbruge da det ofte vil kunne producere bisphenol A, som er et skadeligt stof.\\
+Polyethylene er en af de mest normale plastiktyper, og produceres i fire forskellige densiteter, som giver den forskellige egenskaber. Polyethylene skal blot smeltes for at kunne genbruges så vidt at produktet er rent og er af samme densitet.\\
+Polypropylene er et meget fleksibelt og robust plastik der kan holde til længerevarende stress. Det kan genbruges i omsmeltninger hvor ned mod halvdelen behøver at være rent stof, uden nogen egentlig effekt.\\
+Polyethylene Terephthalate den mest almindelige plastik i vores hverdag. Denne type plastik er meget resistent overfor kemiske reaktioner såvel som slag. Det er en nem plastik at genbruge på grund af dens kemiske resistens.\\
+Polyvinyl Chloride er en plastik der ofte bliver brugt i forhold til konstruktion, da den gang blandes med mange andre materialer, kan give den forskellige egenskaber. På grund af denne blandings egenskab og tilstedeværelsen af chlorid, er det dog svært at genbruge, fordi der oftest vil blive produceret giftige gasser ved blandt andet forbrændingsreaktioner.\\
+Acrylonitrile-Butadiene-Styrene dette er et plastik som er meget robust,fleksibelt og har en skinnende overflade. Det bliver blandt andet brugt i legetøj som for eksempel LEGO. Det er et dyrt plastik at producere, og da genbrugt plastik af denne type kan blandes med ny skabt plastik i et relativt højt forhold uden nogen indvirkning, er genbrug af denne type plastik meget attraktiv økonomisk.\\
+
+\subsection*{Underspørgsmål 2}
+
+Hvordan kan udviklingen af væksthastigheden af plastik i havene beskrives matematisk?
+
+\subsection*{Metode afsnit}
+
+Dette underspørgsmål bærer præg af den kvantitative metode idet at der i opstillingen af en matematisk funktion, som beskriver plastik i havene, er taget udgangspunkt i konkret data. Vi bruger derfor til at svare på underspørgsmålet metoden matematisk modellering. Hvor vi ud fra data fra virkeligheden kan opstille en model for fremtiden under forskellige antagelser. På grund af manglen på teori omkring plast udviklingen, har en forudsigelse af funktionsforskriften ikke været mulig, derfor testes forskellige funktionstyper via mindste kvadraters metode. Den bedst passende funktionsforskrift bestemmes derefter ved hjælp af den komparative metode ud fra determinationskoefficienterne.
+Idet de kvantitative resultater ud fra ovenstående har ekstremt store størrelser, som er svære at forstå, sættes disse i perspektiv ved hjælp af den komparative metode med mere relaterbare størrelser.
+
+
+\subsection*{Delkonklusion}
+
+Udledning af plastik til havene kan bedst beskrives ved hjælp af et andengradspolynomium ud fra data om produktionsmængder og information fra relevante kilder.\footnote{Ourworldindata} Vi har lavet regression paa dataet og brugt statistikken der siger 10\% af alt produceret plastik ender i havene til at finde forskriften.\footnote{Plastic-pollution.org}
+$$f(x) = 104580.9299x^2 -1218697.71745x+9720209.11485$$
+Hvor $x$ er antallet af  år efter 1950 og $f(x)$ er massen af plastik i havene i ton pr. år. Derefter har vi integreret den for at finde den kumulative mængde af plastik, dvs. den mængde plastik der er endt i havene siden 1950. Vi ignorerer integrationskonstanten idet produktionen af plastik før 1950 er så lille i forhold til størrelserne af mængderne at den effektivt kan ignoreres. Der bliver forskriften.
+$$4.36858\cdot 10^8\cdot x+6.71132\cdot 10^6\cdot x^2+9.65169\cdot10^9$$
+hvor $x$ er antal år efter 1950 og $f(x)$ er ton plastik i havene.
+For at gøre tallene mere fordøjelige har vi taget den estimerede mængde af plastik i havene i år 2020 og kigget på den i forhold til Eiffeltårnets masse paa 10100 ton, hvor det viser sig at der i 2020 vil svarer til at vaere 995613 Eiffeltårne i plastik der flyder rundt i havene.
+
+\subsection*{Underspørgsmål 3}
+
+Hvilken løsningsmulighed for plastik problemet i havene fremfører bakteriet Ideonella sakaiensis?
+
+\subsection*{Metode afsnit}
+
+For at besvare dette underspørgsmål har vi fokuseret på kvalitativ empiri produceret af forskere indenfor området, i form af rapporter omkring enzymet PETase. Forskerne har fundet enzymets struktur, ved hjælp af kemisk analyse af enzymet på krystalliseret form. Med kendskab til strukturen, har de ved hjælp af kemisk empiri fra tidligere forsøg med enzymer, der ligner PETase, opstillet en hypotese omkring hvordan enzymet burde virke, og endvidere, hvordan enzymet potentielt kan forbedres. Disse hypoteser har de derefter testet ved hjælp af forskellige forsøg.
+
+\subsection*{Delkonklusion}
+
+Ideonella Sakaiensis er et bakterie der producerer to forskellige enzymer, PETase og MHETase. PETase er enzymet der har potentiale for at kunne nedbryde polyethylene terephthalate plastik til dets originale komponenter i reaktionen:
+$$\ce{(PET)_n + PETase + MHETase -> terephtalsyre + ethandiol}$$
+og derved løse en stor del af plastik problemet, idet produkterne er identiske med reaktanterne der bliver brugt under produktion af PET-plastik. Strukturen af PETase enzymet har forskere fundet ved hjælp af diverse metoder. Ud fra strukturen kan grunden til enzymets nedbrydende egenskaber findes, og forhåbentligt forbedres til at kunne være en bedre løsning til nedbrydelsen af plastik i forhold til skabelsen af ny plastik og et alternativ til de nutidige genbrugelses metoder.
+
+\section*{Konklusion}
+
+Ved hjælp af de matematiske metoder, har vi fundet en funktionsforskrift, der kan forudsige udviklingen af plastik i havene, hvis udviklingen af plastik udledelse fortsætter med samme hastighed, som den gør i nutiden. Denne funktion er blevet sat i perspektiv til en relaterbar størrelse, i form af vægten af et Eiffeltårn, for at give de ekstremt store tal betydning. Resultatet af denne sammenligning har været konklusionen at der i 2020 vil være en masse af plastik i havene, som er på størrelse med vægten af en million Eiffeltårne. Dette er en tankevækkende statistik, som vil følge en lineær vækst, hvis ikke problemet med plastikaffald løses.
+På grund af størrelsen af dette plastik problem, bliver der forsket i forskellige løsningsmuligheder, til at redde jorden. Et bakterie der er blevet fundet, ved navn Ideonella Sakaiensis er blevet observeret til at producere enzymer der kan nedbryde PET plastik. Dette plastik er specielt udbredt i forureningen, da dette er en af de plastik typer der bliver brugt i den største mængde forbrugsvarer.
+For at dette enzym skal kunne være en effektiv løsning til nedbrydelsen af plastik i havene og andre steder, skal det dog først optimeres. For at kunne optimere enzymet har forskere fundet enzymets struktur ved hjælp af forskellige forsøg, og ud fra denne struktur spekuleret i metoder der ville forbedre enzymets evne til at nedbryde plastik.
+
+\section*{Perspektivering til Studierapport}
+
+I form af den generelle problemstilling kan der perspektiveres til AT 1, hvor vi arbejdede med Henrik Svensmarks forskninger, som omhandlede den globale opvarmning. Global opvarmning og plastik i havene kan siges at være relaterede problemstillinger, da de begge omhandler klima, selvom vi ikke i denne AT opgave har taget stilling til plastik forureningens basale klima problemstilling.\\
+En parallel kan også drages til AT 4,  hvor vi undersøgte videnskabelige gennembrud og teknologiske landvindinger i perioden 1851-1914. I AT 4 opgaven brugte vi hovedsageligt informationssøgning, hvilket også har dannet grundlag for meget af denne AT opgave. Derudover blev den deduktive metode også brugt, hvilken også er relevant til denne AT opgave.\\
+I AT 5 forløbet havde vi fokus på menneskets forhold til naturen, hvor vi fokuserede på Newtons love. I denne AT opgave undersøgte vi hvilke metoder Newton havde brugt da han udtænkte sine love, ligesom vi i denne AT opgave har fundet hvilke forsøg, der har tilladt forskere at opnå deres viden omkring enzymet PETase.
+
+\section*{Litteraturliste}
+
+\begin{enumerate}
+
+        \item[-] science.sciencemag.org: Science. Udgivet af American Association for the Advancement of Science. Internetadresse: \url{http://science.sciencemag.org/content/351/6278/1196} - Besøgt d. 27.03.2019 (Internet)
+        \item[-] Our World in Data: Plastic Pollution. Udgivet af Creative Commons. Internetadresse: \url{https://ourworldindata.org/plastic-pollution} - Besøgt d. 27.03.2019 (Internet)
+        \item[-] PNAS: Characterization and engineering of a plastic-degrading aromatic polyesterase. Udgivet af Alexis T. Bell. Internetadresse: \url{https://www.pnas.org/content/115/19/E4350} - Besøgt d. 27.03.2019 (Internet)
+        \item[-] Plastic pollution: When the mermaids cry: The great plastic tide. Internetadresse: \url{http://plastic-pollution.org/} - Besøgt d. 27.03.2019 (Internet)
+        \item[-] 7 types of plastic. Udgivet af A and C plastics INC.
+                Internetadresse: \url{https://www.acplasticsinc.com/informationcenter/r/7-different-types-of-plastic-and-how-they-are-used} - Besøgt d. 27.03.2019 (Internet)
+        \item[-] Plastic expert: PMMA recycling. Udgivet af Plastic expert. Internetadresse: \url{https://www.plasticexpert.co.uk/pmma-acrylic-recycling/} - Besøgt d. 27.03.2019 (Internet)
+        \item[-] Creative Mechanisms: Everything You Need To Know About Polycarbonate (PC). Udgivet af Creative Mechanisms. Internetadresse: \url{https://www.creativemechanisms.com/blog/everything-you-need-to-know-about-polycarbonate-pc} - Besøgt d. 27.03.2019 (Internet)
+        \item[-] Wikipedia: Polycarbonate. Udgivet af Wikipedia. Internetadresse: \url{https://en.wikipedia.org/wiki/Polycarbonate} - Besøgt d. 27.03.2019 (Internet)
+        \item[-] Phys: A new way to recycle polycarbonates. Udgivet af Bob Yirka. Internetadresse: \url{https://phys.org/news/2016-06-recycle-polycarbonates-bpa-leaching.html} - Besøgt d. 27.03.2019 (Internet)
+        \item[-] AZO Cleantech: Recycling of High-Density Polyethylene . Udgivet af G. P. Thomas. Internetadresse: \url{https://www.azocleantech.com/article.aspx?ArticleID=255#Recycling_of_High-Density_Polyethylene} - Besøgt d. 27.03.2019 (Internet)
+        \item[-] Wikipedia: PET bottle recycling. Udgivet af Wikipedia. Internetadresse: \url{https://en.wikipedia.org/wiki/PET_bottle_recycling} - Besøgt d. 27.03.2019 (Internet)
+        \item[-] Bio Energy Consult: Recycling of Polyvinyl Chloride. Udgivet af Michelle Rose Rubio. Internetadresse: \url{https://www.bioenergyconsult.com/tag/pvc-recycling-methods/} - Besøgt d. 27.03.2019 (Internet)
+        \item[-] Wikipedia: Acrylonitrile butadiene styrene. Udgivet af Wikipedia. Internetadresse: \url{https://en.wikipedia.org/wiki/Acrylonitrile_butadiene_styrene} - Besøgt d. 27.03.2019 (Internet)
+        \item[-] Dave Hakkens: Recycling of ABS Plastics !!. Udgivet af ektadubey. Internetadresse: \url{https://davehakkens.nl/community/forums/topic/recycling-of-abs-plastics/} - Besøgt d. 27.03.2019 (Internet)
+
+\end{enumerate}
+
+\end{document}
