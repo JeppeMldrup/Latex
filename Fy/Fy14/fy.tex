@@ -1,0 +1,149 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhead[L]{Jeppe Møldrup}
+\fancyhead[C]{Fysik 14}
+\fancyhead[R]{29/04-2019}
+
+\begin{document}
+
+\section*{3a}
+
+Opskriv reaktionssmemaet for det radioaktive henfald af $^{18}F$.
+
+$\beta^+$-henfald
+$$^{18}F \rightarrow ^{18}O + e^+ + \nu _e$$
+Flour og oxygen har begge 18 neukleoner, og derfor er nukleontallet bevaret. Ladningen er bevaret ved at der bliver udsendt en positron, og leptontallet bliver bevaret idet der udsendes en neutrino.
+
+\section*{3b}
+
+Bestem den gennemsnitlige energi, der afsættes i patienten pr henfald af $^{18}F$.
+
+Jeg kender følgende størrelser
+$$A_0 = 320\ MBq$$
+$$H = 6.1\ mSv$$
+$$T_{1/2,bio}=6\ timer$$
+$$T_{1/2} = 1.8288\ timer$$
+$$m = 77\ kg$$
+Jeg starter med at finde den effektive halveringstid med formlen
+$$T_{1/2,eff} = \frac{T_{1/2,bio}\cdot T_{1/2}}{T_{1/2,bio}+T_{1/2}} = \frac{6\ timer\cdot 1.8288\ timer}{6\ timer + 1.8288\ timer} = 1.402\ timer$$
+Idet positroner har vægtfaktoren $w_r = 1$ er den ækvivalente dosis den samme som den fysiske, så jeg isorlerer den gennemsnitlige energi i formlen
+$$D = \frac{A_0\cdot T_{1/2,eff}\cdot <E>}{\ln(2)\cdot \Delta m}$$
+$$<E> = \frac{D\cdot \ln(2)\cdot \Delta m}{A_0\cdot T_{1/2,eff}} = \frac{6.1\ mGy\cdot \ln(2)\cdot 77\ kg}{320\ MBq\cdot 1.402\ timer \cdot 60 \cdot 60} = 2.016\cdot 10^{-10}\ J$$
+Så den gennemsnitlige energi per henfald af $^{18}F$ er $2.016\cdot 10^{-13}$ J
+
+\section*{4a}
+
+Bestem strømstyrken i protonbeamet
+
+Der produceres $^111$-In. Target af cadmium bestråles af protoner med intensiteten $1.31\cdot 10^{14}\ s^{-1}$.
+Strømstyrken findes med formlen
+$$I = |q| \cdot I$$
+Protoner har elementarladning, så jeg indsætter
+$$I = 1.602\cdot 10^{-19}\ C\cdot 1.31\cdot 10^{14}\ s^{-1} = 2.0986\cdot 10^{-5}\ A$$
+Såintensiteten er cirka 210 mA
+
+\section*{4b}
+
+\section*{5a}
+
+Bestem den maksimale tilladte dosishastighed, patienten må udsættes for
+
+Dosishastighed er fysisk dosis pr tid. Idet $^{137}Cs$ henfalder med $\beta^{-}$ betyder det at fysisk dosis er lig med ækvivalent dosis. Så jeg finder dosis pr tid ved at dividere den modtagne stråling med tiden det tager.
+$$D' = \frac{0.020\ mSv}{50\ timer} = 0.0004\ mSv/h = 0.4\ \mu Sv/h$$
+Idet patienten kun modtager 30\% af strålingen, finder jeg den reele strålingshastighed
+$$0.4\ \mu Sv/h \cdot \frac{10}{3} = 1.\overline{3}\ \mu Sv/h$$
+Så den maksimale strålingshastighed patienten må udsættes for er $1.\overline{3}\ \mu Sv/h$
+
+\section*{5b}
+
+Vurder, hvor tyk betonvæggen skal være for, at dosishastigheden ikke overstiger 1.3 $\mu$Sv/h.
+
+Betons halveringstykkelse er 13.2 cm. Dosishastighed fra en punktkilde er givet ved
+$$D' = \Gamma\cdot\frac{A}{x^2}$$
+Så jeg finder aktiviteten af en kilde hvis dosishastigheden skal være 1.3 $\mu$Sv/h. Jeg dividerer med $60^2$ idet aktivitet er i sekunder og ikke timer.
+$$A = \frac{1.3\cdot 10^{-6}\ Sv/h\cdot (2\ m)^2}{60\cdot 60\cdot 20.3\cdot 10^{-18}\ Sv\cdot m^2} = 71154899\ Bq \approx 71.2 MBq$$
+Så de 2.60 GBq skal sænkes til 71.2 MBq, så jeg bruger formlen
+$$A = A_0 \cdot \left( \frac{1}{2} \right) ^{\frac{x}{x_{1/2}}}$$
+Så jeg indsætter og solver for tykkelsen x
+$$solve(71.2\ MBq = 2.60\ GBq\cdot (0.5)^{x/13.2\ cm},x) \rightarrow x = 68.5\ cm$$
+Så betonvæggen skal være cirka 68.5 cm tyk for at dosishastigheden ikke overstiger 1.3 $\mu$Sv/h.
+
+\section*{6a}
+
+Beregn den effektive halveringstid for $^{65}Zn$
+
+$T_{1/2,bio} = 933\ dage$ og $T_{1/2} = 244\ dage$
+Jeg benytter formlen
+$$T_{1/2,eff} = \frac{T_{1/2,bio}\cdot T_{1/2}}{T_{1/2,bio}+T_{1/2}} = \frac{933\ dage\cdot 244\ dage}{933\ dage + 244\ dage} = 193.42\ dage$$
+Så den effektive halveringstid for Zink-65 er 193 dage.
+
+\section*{7a}
+
+Bestem den ækvivalente dosis ved denne behandling
+
+$^{90}Y$ henfalder med beta- og gamma, som begge har vægtfaktoren 1. Så derfor er
+$$H=D$$
+dvs.
+$$H=D=150\ Sv$$
+Så den ækvivalente dosis er 150 Sv.
+
+\section*{7b}
+
+Hvilken startaktivitet af $^{90}Y$ i leveren skal man vælge for, at den fysiske dosis ved denne behandling er 150 Gy.
+
+Idet stoffet ikke fjernes af leveren, er der ingen biologisk halveringstid. Så halveringstiden er lig med den effektive halveringstid.
+$$T_{1/2,eff}=2.6684\ dage$$
+$$<E> = 1.502\cdot 10^{-13}\ J$$
+$$D=150\ Gy$$
+$$\Delta m=1.5\ kg$$
+Jeg isolerer startaktiviteten i formlen
+$$D=\frac{A_0\cdot T_{1/2,eff}\cdot <E>}{\ln(2)\cdot \Delta m}$$
+$$A_0=\frac{D\cdot \Delta m\cdot \ln(2)}{T_{1/2,eff}\cdot <E>}$$
+Jeg indsætter
+$$A_0=\frac{150\ Gy\cdot 1.5\ kg\cdot \ln(2)}{2.6684\ dage\cdot 60\cdot 60\cdot 1.502\cdot 10^{-13}\ J}=108089775230\ s^{-1} \approx 108\ GBq$$
+Så startaktiviteten hvis den fysiske dosis skal være 150 Gy skal være cirka 108 GBq.
+
+\section*{10a}
+
+Opskriv reaktionsskemaet for det radioaktive henfald af $^{198}Au$.
+
+Au-198 henfalder med $\beta^-$-henfald
+$$^{198}Au \rightarrow ^{198}Hg + e^- + \overline{\nu}_e$$
+Her er neuklidtallet, ladningen og leptontallet bevaret.
+
+\section*{10b}
+
+Bestem antallet af tilbageværende kerner af isotopen Au-198 i patientens tunge 7.0 døgn efter behandlingens start.
+
+Halverings tiden af Au-198 er $T_{1/2} = 2.6944\ dage$
+
+Jeg benytter formlen
+$$A = A_0\cdot \left( \frac{1}{2} \right) ^{\frac{t}{T_{1/2}}}$$
+For at finde aktiviteten efter de 7 døgn
+$$A = 3.7\cdot 10^9\ Bq\cdot \left( \frac{1}{2} \right) ^{\frac{7\ dage}{2.6944\ dage}} = 611127061.989 \approx 0.61\ GBq$$
+Så bruger jeg formlen
+$$A = k\cdot N$$
+hvor
+$$k = \frac{ln(2)}{T_{1/2}}$$
+for at finde antallet af kerner.
+$$N = \frac{A\cdot T_{1/2}}{ln(2)} = \frac{0.61\ GBq\cdot 2.6944\cdot 24\cdot 60^2}{ln(2)} = 2.05\cdot 10^{14}$$
+Så efter 7 dage ville der være 2.05$\cdot 10^{14}$ kerner tilbage.
+
+\section*{10c}
+
+Vurder størrelsen af den ækvivalente dosis, som den pårørende modtager.
+
+Jeg bruger formlen
+$$D' = \Gamma \frac{A}{x^2}$$
+Og finder dosishastigheden
+$$D' = 0.0788\ \frac{mSv\cdot m^2}{h\cdot GBq}\cdot \frac{0.61\ GBq}{(1.5\ m)^2} = 0.02136\ mSv/h \approx 21.4\ \mu Sv/h$$
+Så ganger jeg med tiden for at finde D
+$$21.4\ \mu Sv/h \cdot 7\ dage\cdot 24 = 3595.2\ \mu Sv \approx 3.6\ mSv$$
+Da der er tale om gamma/beta henfald, er vægtfaktoren 1, dvs. ækvivalent og fysisk dosis er den samme.
+Så den pårørende modtager 3.6 mGy.
+
+\end{document}

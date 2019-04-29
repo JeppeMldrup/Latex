@@ -1,0 +1,105 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.9.17)  15 APR 2019 15:46
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**fy.tex
+(./fy.tex
+LaTeX2e <2018-04-01> patch level 5
+(/usr/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/04/06 v1.3b Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+)
+(/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip43
+\f@nch@O@elh=\skip44
+\f@nch@O@erh=\skip45
+\f@nch@O@olh=\skip46
+\f@nch@O@orh=\skip47
+\f@nch@O@elf=\skip48
+\f@nch@O@erf=\skip49
+\f@nch@O@olf=\skip50
+\f@nch@O@orf=\skip51
+) (./fy.aux)
+\openout1 = `fy.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 17.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 17.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 24.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 24.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 24.
+
+Overfull \hbox (2.08482pt too wide) in paragraph at lines 37--38
+[]\OT1/cmr/m/n/12 Jeg finder den mak-si-male sp^^Znd-ing og udreg-ner str^^\mst
+yrken med formlen 
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2] [3] (./fy.aux) ) 
+Here is how much of TeX's memory you used:
+ 385 strings out of 492642
+ 4312 string characters out of 6135566
+ 65227 words of memory out of 5000000
+ 4340 multiletter control sequences out of 15000+600000
+ 8194 words of font info for 29 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 22i,11n,43p,160b,188s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
+2.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sh
+are/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on fy.pdf (3 pages, 96513 bytes).
+PDF statistics:
+ 50 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
